@@ -20,7 +20,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="../../index.php">
+                        <a class="nav-link" href="../general/home.php">
                             <i class="fas fa-home"></i> Home
                         </a>
                     </li>
@@ -30,7 +30,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../menu.php">
+                        <a class="nav-link" href="menu.php">
                             <i class="fas fa-gamepad"></i> Games
                         </a>
                     </li>
