@@ -1,13 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Initial Page just to see something</title>
+    <title>My Website</title>
+    <link rel="stylesheet" type="text/css" href="stylesheets/index.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
-    <h1>This is just to test the repository</h1>
-    <img width=500px src="data:image/png;base64,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" alt="logo">
+    <header>
+        <nav class="navbar navbar-expand-lg navbar bg-blue">
+            <a class="navbar-brand" href="index.php">
+                <img id="logo" src="src/logo.png" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.php">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="settings.php">
+                            <i class="fas fa-cog"></i> Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="games/game.html">
+                            <i class="fas fa-gamepad"></i> Games
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="welcome">
+            <div id="welcome-text">Welcome to the Etown gaming website!</div>
+            <br>
+            <div id="welcome-subtext">This website will primarily be used for open houses and 
+                new student events to introduce them to some of the
+                facts and traditions that shape the lives of Etown
+                college students. Prospective students will be asked questions,
+                and if answered correctly, Etown themed games will be accessible
+                to play.
+            </div>
+        </section>
+    </main>
+
+    <!-- Rest of your HTML content -->
 </body>
 </html>
