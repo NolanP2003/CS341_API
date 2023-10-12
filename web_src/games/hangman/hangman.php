@@ -17,12 +17,12 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="../../index.php">
+                    <a class="nav-link" href="../../general/home.php">
                         <i class="fas fa-home"></i> Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../../settings.php">
+                    <a class="nav-link" href="../general/settings.php">
                         <i class="fas fa-cog"></i> Settings
                     </a>
                 </li>
@@ -49,6 +49,6 @@
             </div>
         </div>
     </main>
-    <script src="game.js"></script>
+    <script src="hangman.js"></script>
 </body>
 </html>
