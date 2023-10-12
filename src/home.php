@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -28,7 +29,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="games/menu.php">
+                        <a class="nav-link" href="games/game.php">
                             <i class="fas fa-gamepad"></i> Games
                         </a>
                     </li>
@@ -49,7 +50,16 @@
                 to play.
             </div>
         </section>
+        <section id="game">
+            <div id="welcome-text">Start Playing</div>
+            <br>
+            <div id="welcome-subtext">Answer a trivia question, play a round of hang jay! 
+                Learn more about Elizabethtown and try to get on the leaderboard!
+            </div>
+            <a href="games/game.php">Start Game</a>
     </main>
 
+    <!-- Rest of your HTML content -->
 </body>
 </html>
+
