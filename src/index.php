@@ -28,7 +28,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="games/game.php">
+                        <a class="nav-link" href="games/menu.php">
                             <i class="fas fa-gamepad"></i> Games
                         </a>
                     </li>
@@ -51,6 +51,5 @@
         </section>
     </main>
 
-    <!-- Rest of your HTML content -->
 </body>
 </html>

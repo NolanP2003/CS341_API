@@ -2,7 +2,7 @@
 <html>
 <head>
     <title>Hangman Game</title>
-    <link rel="stylesheet" type="text/css" href="game.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/hangman.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
@@ -17,17 +17,17 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="../index.html">
+                    <a class="nav-link" href="../../index.php">
                         <i class="fas fa-home"></i> Home
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../settings.php">
+                    <a class="nav-link" href="../../settings.php">
                         <i class="fas fa-cog"></i> Settings
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="game.html">
+                    <a class="nav-link" href="hangman.php">
                         <i class="fas fa-gamepad"></i> Games
                     </a>
                 </li>
