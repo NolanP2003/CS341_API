@@ -27,13 +27,14 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="hangman.php">
+                    <a class="nav-link" href="../menu.php">
                         <i class="fas fa-gamepad"></i> Games
                     </a>
                 </li>
             </ul>
         </div>
     </nav>
+    
     <main>
     <h1>Hangman Game</h1>
         <p>Guess the word by entering a letter.</p>

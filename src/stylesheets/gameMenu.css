@@ -1,13 +1,29 @@
 body {
     font-family: Arial, sans-serif;
     text-align: center;
-    background-color: #f0f0f0;
+    background-color: #DAD9D9 !important;
 }
 
 #welcome-message {
     font-size: 24px;
     margin-top: 20px;
     color: #333;
+}
+
+#logo {
+    max-width: 100px;
+}
+
+.navbar {
+    background-color: #1266AC;
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
 }
 
 #game-select {
