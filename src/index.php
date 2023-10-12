@@ -28,7 +28,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="games/game.html">
+                        <a class="nav-link" href="games/game.php">
                             <i class="fas fa-gamepad"></i> Games
                         </a>
                     </li>
