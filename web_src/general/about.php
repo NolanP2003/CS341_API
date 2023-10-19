@@ -1,19 +1,16 @@
-
-<!DOCTYPE html>
 <html>
 <head>
-    <title>My Website</title>
+    <title>About</title>
     <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar bg-blue">
-            <a class="navbar-brand" href="index.php">
-                <img id="logo" src="../includes/images/logo.png" alt="Logo" width='100px.'>
-            </a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <nav class="navbar navbar-expand-lg navbar bg-blue">
+        <a class="navbar-brand" href="index.php">
+            <img id="logo" src="../includes/images/logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -38,12 +35,11 @@
                     </li>
                 </ul>
             </div>
-        </nav>
-    </header>
+</nav>
 
     <main>
         <section id="welcome">
-            <div id="welcome-text">Welcome to the Etown gaming website!</div>
+            <div id="welcome-text">Our Vision</div>
             <br>
             <div id="welcome-subtext">This website will primarily be used for open houses and 
                 new student events to introduce them to some of the
@@ -52,18 +48,14 @@
                 and if answered correctly, Etown themed games will be accessible
                 to play.
             </div>
-        </section>
-        <section id="game">
-            <div id="welcome-text">Start Playing</div>
             <br>
-            <div id="welcome-subtext">Answer a trivia question, play a round of hang jay! 
-                Learn more about Elizabethtown and try to get on the leaderboard!
-            </div>
-            <a class="nav-link" href="../games/menu.php">Start Game</a>
         </section>
+        <section id="team">
+            <div id="welcome-text">Founding Team</div>
+            <br>
+            <div id="welcome-subtext">Our team came together during Professor Reddig's Software Engineering class.
+                We had a vision and creative freedom, and here we are.
+        </div>
     </main>
-
-    <!-- Rest of your HTML content -->
 </body>
 </html>
-
