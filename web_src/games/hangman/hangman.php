@@ -9,7 +9,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar bg-blue">
         <a class="navbar-brand" href="index.php">
-            <img id="logo" src="src/logo.png" alt="Logo">
+            <img id="logo" src="../../includes/images/logo.png" alt="Logo">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -25,6 +25,9 @@
                     <a class="nav-link" href="../general/settings.php">
                         <i class="fas fa-cog"></i> Settings
                     </a>
+                </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="../../general/about.php">About</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../menu.php">
