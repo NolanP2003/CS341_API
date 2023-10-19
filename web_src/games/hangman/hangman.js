@@ -1,17 +1,19 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const wordList = ["TRUMAN", "CONRAD", "BLUEJAY", "BOWERS", "FOUNDERS", "SCHLOSSER", "ELIZABETHTOWN", "JAYNEST", "THOMPSON", "BRINSER"];
-
-    let word = selectRandomWord(wordList);
-    let guessedWord = initializeGuessedWord(word);
+    // const wordList = ["TRUMAN", "CONRAD", "BLUEJAY", "BOWERS", "FOUNDERS", "SCHLOSSER", "ELIZABETHTOWN", "JAYNEST", "THOMPSON", "BRINSER"];
+    // His name is actually blue, according to an anonymous user
+    
+    let word = ''; // selectRandomWord(wordList);
+    let guessedWord = ''; // initializeGuessedWord(word);
     let attempts = 6;
+    randomWord(); // Doesn't return anything, so no variable
 
     const wordDisplay = document.getElementById("word-display");
     const guessInput = document.getElementById("guess");
     const guessButton = document.getElementById("guess-button");
     const attemptCount = document.getElementById("attempt-count");
 
-    renderWordDisplay();
-
+    // renderWordDisplay();
+    
     guessButton.addEventListener("click", function () {
         const guess = guessInput.value.toUpperCase();
         if (guess.length === 1 && guess.match(/[A-Z]/)) {
@@ -22,9 +24,17 @@ document.addEventListener("DOMContentLoaded", function () {
         guessInput.value = "";
     });
 
-    function selectRandomWord(wordList) {
+    /* Selecting a random word Take 2 */
+    function randomWord() {
+        fetch('http://localhost/CS341_API/data_src/api/hangman/word.php', {method: 'get',}) // (CS363 GET; Default?)
+            .then(response => response.json()) // get response from json, {poof} data, store in response
+            .then(data => {word = data.word; guessedWord = initializeGuessedWord(word); renderWordDisplay();}) // takes word value and stores it in var word 
+            .catch(console.error); // Erroring?
+    } // r and d are parameters in the arrow function
+    
+    /*function selectRandomWord(wordList) { Sorry, Nolan
         return wordList[Math.floor(Math.random() * wordList.length)];
-    }
+    } */
 
     function initializeGuessedWord(word) {
         return "_".repeat(word.length).split("");
