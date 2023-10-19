@@ -30,7 +30,9 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../general/about.php">About</a>
+                        <a class="nav-link" href="../general/about.php">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="menu.php">
