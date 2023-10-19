@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar bg-blue">
-            <a class="navbar-brand" href="index.php">
+            <a class="navbar-brand" href="https://etown.edu/">
                 <img id="logo" src="../includes/images/logo.png" alt="Logo" width='100px.'>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -58,10 +58,12 @@
         <section id="game">
             <div id="welcome-text">Start Playing</div>
             <br>
-            <div id="welcome-subtext">Answer a trivia question, play a round of hang jay! 
+            <div id="welcome-subtext">Answer a trivia question, play a round of hangman! 
                 Learn more about Elizabethtown and try to get on the leaderboard!
             </div>
-            <a class="nav-link" href="../games/menu.php">Start Game</a>
+            <br>
+            <!-- Links start button image and uses that to route to game menu. -->
+            <a href="../games/menu.php"><img src = "../includes/images/start_button.png" class="center" width='140px.'></a>
         </section>
     </main>
 
