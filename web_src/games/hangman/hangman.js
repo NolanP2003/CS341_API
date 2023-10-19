@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
     // const wordList = ["TRUMAN", "CONRAD", "BLUEJAY", "BOWERS", "FOUNDERS", "SCHLOSSER", "ELIZABETHTOWN", "JAYNEST", "THOMPSON", "BRINSER"];
     // His name is actually blue, according to an anonymous user
+    // NO HIS NAME WILL NEVER BE BLUE I REFUSE!!!!!!!!!!!!!!!!
     
     let word = ''; // selectRandomWord(wordList);
     let guessedWord = ''; // initializeGuessedWord(word);
@@ -11,6 +12,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const guessInput = document.getElementById("guess");
     const guessButton = document.getElementById("guess-button");
     const attemptCount = document.getElementById("attempt-count");
+    const guessedLettersList = document.getElementById("guessed-letters-list");
+    const guessedLetters = [];
 
     // renderWordDisplay();
     
@@ -45,8 +48,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleGuess(letter) {
+       
         if (attempts > 0) {
-            if (word.includes(letter)) {
+            if (guessedLetters.includes(letter)) {
+                alert(letter + " has already been guessed.");
+            }
+            else if (word.includes(letter)) {
+                guessedLetters.push(letter);
+                guessedLettersList.textContent = guessedLetters.join(", ");
                 for (let i = 0; i < word.length; i++) {
                     if (word[i] === letter) {
                         guessedWord[i] = letter;
@@ -59,6 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 attempts--;
                 attemptCount.textContent = attempts;
+                guessedLetters.push(letter); // get guessed letter
+                guessedLettersList.textContent = guessedLetters.join(", "); // put guessed letter into a list
+                
                 if (attempts === 0) {
                     endGame("Sorry, you're out of attempts. The word was: " + word);
                 }

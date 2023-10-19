@@ -27,8 +27,10 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                        <a class="nav-link" href="../../general/about.php">About</a>
-                </li>
+                        <a class="nav-link" href="../../general/about.php">
+                            <i class="fas fa-info-circle"></i> About
+                        </a>
+                    </li>
                 <li class="nav-item">
                     <a class="nav-link" href="../menu.php">
                         <i class="fas fa-gamepad"></i> Games
@@ -40,6 +42,7 @@
     
     <main>
     <h1>Hangman Game</h1>
+    
         <p>Guess the word by entering a letter.</p>
         <div class="hangman-container">
             <div class="word-display" id="word-display"></div>
@@ -50,6 +53,11 @@
                 <input type="text" id="guess" maxlength="1">
                 <button id="guess-button">Guess</button>
             </div>
+        </div>
+
+        <div id="guessed-letters-box">
+            <h2>Guessed Letters</h2>
+            <div id="guessed-letters-list"></div>
         </div>
     </main>
     <script src="hangman.js"></script>
