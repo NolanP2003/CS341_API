@@ -1,11 +1,11 @@
 use u413142534_quizgames;
-
+SELECT * FROM hangman;
 CREATE TABLE IF NOT EXISTS user (
     userID INT AUTO_INCREMENT,
     username VARCHAR(50) NOT NULL,
     PRIMARY KEY (userID)
 );
-CREATE TABLE IF NOT EXISTS trivia (
+CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
 	questionID INT AUTO_INCREMENT,
     question VARCHAR(255) NOT NULL,
     PRIMARY KEY (questionID)
@@ -23,3 +23,93 @@ CREATE TABLE IF NOT EXISTS hangman (
     word varchar(50) NOT NULL,
     PRIMARY KEY (wordID)
 );
+
+# Question 1 and answers
+INSERT INTO trivia (question) VALUES ("What year was Etown founded?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (1, "1899", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (1, "1901", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (1, "1874", FALSE);
+
+# Question 2 and answers
+INSERT INTO trivia (question) VALUES ("What is the mascot's name?"); 
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (2, "Conrad", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (2, "Blue", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (2, "Truman", FALSE);
+
+# Question 3 and answers
+INSERT INTO trivia (question) VALUES ("What is the name of the Bluejay?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (3, "Blue", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (3, "Conrad", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (3, "Truman", FALSE);
+
+# Question 4 and answers
+INSERT INTO trivia (question) VALUES ("What is the campus support dog's name?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (4, "Truman", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (4, "Conrad", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (4, "Blue", FALSE);
+
+# Question 5 and answers
+INSERT INTO trivia (question) VALUES ("Who is the president of etown?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (5, "Betty Rider", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (5, "Cecilia McCormick", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (5, "Thomas Leap", FALSE);
+
+# Question 6 and answers
+INSERT INTO trivia (question) VALUES ("What sport plays the marshmallow game?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (6, "Soccer", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (6, "Lacrosse", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (6, "Baseball", FALSE);
+
+# Question 7 and answers
+INSERT INTO trivia (question) VALUES ("What sport does etown not have?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (7, "Football", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (7, "Golf", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (7, "Tennis", FALSE);
+
+# Question 8 and answers
+INSERT INTO trivia (question) VALUES ("What dessert is etown known for?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (8, "Carrot cake", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (8, "Cheesecake", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (8, "Chocolate cake", FALSE);
+
+# Question 9 and answers
+INSERT INTO trivia (question) VALUES ("Where is the Fresh Nest located on campus?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (9, "Bowers Center", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (9, "The BSC", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (9, "Esbenshade", FALSE);
+
+# Question 10 and answers
+INSERT INTO trivia (question) VALUES ("Where is the Blue Bean located on campus?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (10, "The BSC", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (10, "Bowers Center", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (10, "Esbenshade", FALSE);
+
+# Question 11 and answers
+INSERT INTO trivia (question) VALUES ("Where is the Jay's Nest located on campus?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (11, "The BSC", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (11, "Bowers Center", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (11, "Esbenshade", FALSE);
+
+# Question 12 and answers
+INSERT INTO trivia (question) VALUES ("What is Etown's most popular sport?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (12, "Lacrosse", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (12, "Baseball", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (12, "Cross Country", FALSE);
+
+# Question 13 and answers
+INSERT INTO trivia (question) VALUES ("What is Etown's most popular program?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (13, "Occupational Therapy", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (13, "Computer Science", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (13, "Business", FALSE);
+
+# Populating hangman with words
+INSERT INTO hangman (word) VALUES ("TRUMAN");
+INSERT INTO hangman (word) VALUES ("CONRAD");
+INSERT INTO hangman (word) VALUES ("BLUEJAY");
+INSERT INTO hangman (word) VALUES ("BOWERS");
+INSERT INTO hangman (word) VALUES ("FOUNDERS");
+INSERT INTO hangman (word) VALUES ("SCHLOSSER");
+INSERT INTO hangman (word) VALUES ("ELIZABETHTOWN");
+INSERT INTO hangman (word) VALUES ("JAYNEST");
+INSERT INTO hangman (word) VALUES ("THOMPSON");
+INSERT INTO hangman (word) VALUES ("BRINSER");
