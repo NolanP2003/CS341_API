@@ -65,7 +65,6 @@
         </section>
     </main>
 
-
     <!-- Rest of your HTML content -->
 </body>
 </html>

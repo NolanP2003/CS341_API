@@ -51,7 +51,5 @@
         </section>
     </main>
 
-    
-
 </body>
 </html>
