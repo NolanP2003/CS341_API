@@ -10,12 +10,12 @@ if ($connection->connect_error) {
 }
 
 // Database query
-$query = "SELECT * FROM user;";
+/* $query = "SELECT * FROM user;";
 $result = $connection->query($query);
 
 while ($row = $result->fetch_assoc()) {
     echo "Name: ".$row["username"] . "<br>";
-}
+} */
 
 $query2 = "SELECT t.question, a.triv_answer FROM trivia t JOIN answer a USING (questionID) WHERE is_Correct IS TRUE;";
 $result2 = $connection->query($query2);
@@ -24,6 +24,8 @@ while ($row = $result2->fetch_assoc()) {
     echo "Q: ".$row["question"]."<br>";
     echo "A: ".$row["triv_answer"]."<br><br>";
 }
+
+// TODO: Query out False answers for each question AND Every answer for each question
 
 // Close the database connection
 $connection->close();
