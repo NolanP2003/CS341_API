@@ -46,8 +46,10 @@
         <section id="game">
             <div id="welcome-text">Hangman Settings</div>
             <br>
-            <label for = "hangman">Hangman Word:</label>
-            <input type = "text" name = "hangman" id = "hangman"><br>
+            <form action="../../data_src/api/hangman/add.php" method="post" id="word-submission">
+                Add A Word: <input type="text" name="word"><br>
+                <input type="submit" value="Submit">
+            </form>
         </section>
     </main>
 </body>
