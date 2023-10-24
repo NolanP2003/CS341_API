@@ -50,6 +50,10 @@
                 Add A Word: <input type="text" name="word"><br>
                 <input type="submit" value="Submit">
             </form>
+            <form action="../../data_src/api/hangman/add.php" method="post" id="word-submission">
+                Delete A Word: <input type="text" name="word"><br>
+                <input type="submit" value="Submit">
+            </form>
         </section>
     </main>
 </body>
