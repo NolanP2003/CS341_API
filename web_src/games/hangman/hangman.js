@@ -27,6 +27,24 @@ document.addEventListener("DOMContentLoaded", function () {
         guessInput.value = "";
     });
 
+    guessButton.addEventListener("keypress", function (event) {
+        const guess = guessInput.value.toUpperCase();
+        if (event.key === "Enter") {
+            
+            if (guess.length === 1 && guess.match(/[A-Z]/)) {
+                handleGuess(guess);
+            } else {
+                alert("Please enter a single letter.");
+            }
+            
+            console.log("Keypress event detected:", event.key);
+            event.preventDefault();
+            
+            
+        }
+        guessInput.value = "";
+    });
+
     /* Selecting a random word Take 2 */
     function randomWord() {
         fetch('http://localhost/CS341_API/data_src/api/hangman/word.php', {method: 'get',}) // (CS363 GET; Default?)

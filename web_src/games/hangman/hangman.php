@@ -51,7 +51,7 @@
             </div>
             <div class="input-section">
                 <input type="text" id="guess" maxlength="1">
-                <button id="guess-button">Guess</button>
+                <button id="guess-button" tabindex="0">Guess</button>
             </div>
         </div>
 
