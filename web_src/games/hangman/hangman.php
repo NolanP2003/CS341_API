@@ -22,7 +22,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="../general/settings.php">
+                    <a class="nav-link" href="../../general/settings.php">
                         <i class="fas fa-cog"></i> Settings
                     </a>
                 </li>
