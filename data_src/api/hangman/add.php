@@ -17,23 +17,19 @@ $sql->execute();
 $data = $sql->get_result();
 
 if ($data->num_rows > 0) { // If there are more than 0 rows
-    $message = ["message" => "Rejected. Word is already in Database", "word" => $word];
-    // $response = "rejected";
+    $response = ["status" => "Error", "message" => "Word is already in the database."];
 } else { // If the word isn't in the database
     // We're doing it the hard way I guess
     $sql = $connection->prepare("INSERT INTO hangman (word) VALUES (UPPER(?));");
     $sql->bind_param("s", $word); // No SQLi allowed
     $sql->execute();
 
-    $message = ["message" => "Added a word successfully", "word" => $word];
-    // $response = "success";
+    $response = ["status" => "success", "message" => "Word added successfully."];
 }
 
-echo json_encode($message);
+echo json_encode($response);
 
 $sql->close();
 // Close the database connection
 $connection->close();
-
-// echo "<script>document.getElementById('response').value='".$response."';</script>";
 ?>

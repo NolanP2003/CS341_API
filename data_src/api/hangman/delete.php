@@ -16,19 +16,19 @@ $sql->bind_param("s", $word);
 $sql->execute();
 $data = $sql->get_result();
 
-// TODO: Create a message that pops up on the website instead of going to this page
-
 if ($data->num_rows == 0) { // If nothing comes up
-    $message = ["message" => "Word is not in the Database"];
+    // $message = ["message" => "Word is not in the Database"];
+    $response = ["status" => "Error", "message" => "Word is not in the database."];
 } elseif ($data->num_rows == 1) { // There should only be one row, unneccessary?
     $sql = $connection->prepare("DELETE FROM hangman WHERE word = UPPER(?);");
     $sql->bind_param("s", $word);
     $sql->execute();
 
-    $message = ["message" => "Deleted a word successfully", "word" => $word];
+    // $message = ["message" => "Deleted a word successfully", "word" => $word];
+    $response = ["status" => "success", "message" => "Deleted a word."];
 }
-// Should change it in case it doesn't work
-echo json_encode($message);
+
+echo json_encode($response);
 
 $sql->close();
 // Close the database connection
