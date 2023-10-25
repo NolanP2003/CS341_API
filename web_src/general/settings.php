@@ -20,8 +20,9 @@
                 fetch(form.getAttribute("action"), { // Makes HTTP request
                     method: "POST", body: formData // Sends POST request with form data
                 }).then(response => response.json()) // then expects response in JSON format
-                .then(data => {message.textContent = data.message; input.value = ''; // Sets message and clears text field
+                .then(data => {message.textContent = data.message; message2.textContent = ''; input.value = ''; // Sets message and clears text field
                     message.style.color = data.status === "success" ? "green" : "red"; // Changes color if successful
+                    updateWordList();
                 }).catch(error => { // Error
                     message.textContext = "An error occurred.";
                     message.style.color = "red";
@@ -39,17 +40,27 @@
                 fetch(form2.getAttribute("action"), {
                     method: "POST", body: formData
                 }).then(response => response.json())
-                .then(data => {message2.textContent = data.message; input2.value = ''; // data.<message> comes from php
+                .then(data => {message2.textContent = data.message; message.textContent = ''; input2.value = ''; // data.<message> comes from php
                     message2.style.color = data.status === "success" ? "green" : "red"; // data.<status> comes from php
+                    updateWordList();
                 }). catch(error => {
                     message2.textContext = "An error occurred.";
                     message2.style.color = "red";
                 });
             });
+
+            function updateWordList() {
+                const wordList = document.getElementById("word-list");
+                fetch('http://localhost/CS341_API/data_src/api/hangman/list.php', {method: 'get'})
+                    .then(response => response.json())
+                    .then(data => {wordList.innerHTML = data.join('<br>');}).catch(console.error);
+            }
+            // updateWordList();
         });
     </script>
 
 </head>
+
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar bg-blue">
@@ -90,16 +101,18 @@
         <section id="game">
             <div id="welcome-text">Hangman Settings</div>
             <form action="../../data_src/api/hangman/add.php" method="post" id="add-word">
-                Add A Word: <input type="text" name="word"><br>
-                <input type="submit" value="Submit">
+            &nbspAdd A Word: <input type="text" name="word"><br>
+            &nbsp<input type="submit" value="Submit">
                 <div id="response"></div>
             </form>
             <br>
             <form action="../../data_src/api/hangman/delete.php" method="post" id="delete-word">
-                Delete A Word: <input type="text" name="word"><br>
-                <input type="submit" value="Submit">
+            &nbspDelete A Word: <input type="text" name="word"><br>
+            &nbsp<input type="submit" value="Submit">
                 <div id="response2"></div>
             </form>
+            <br>
+            <div id="word-list"></div>
         </section>
     </main>
 </body>
