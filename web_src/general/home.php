@@ -65,11 +65,10 @@
             </div>
             <br>
             <!-- Links start button image and uses that to route to game menu. -->
-            <a href="../games/menu.php"><img src = "../includes/images/start_button.png" class="center" width='140px.'></a>
+            <a href="../trivia/trivia.php"><img src = "../includes/images/start_button.png" class="center" width='140px.'></a>
         </section>
     </main>
 
-    <!-- Rest of your HTML content -->
 </body>
 </html>
 
