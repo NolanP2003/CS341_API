@@ -39,8 +39,10 @@ function checkAnswer(selectedAnswer) {
             if (currentQuestionIndex < triviaQuestions.length) {
                 displayRandomQuestion();
             } else {
-                
-                alert("Congratulations! You've completed the trivia.");
+                const confirmation = confirm("Congratulations! You've completed the trivia. Click OK to go to the game page.");
+                if (confirmation) {
+                    window.location.href = "../games/menu.php";
+                }
             }
         }, 1000);
     } else {
