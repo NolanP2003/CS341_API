@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE,edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="../stylesheets/gameMenu.css">
+    <link rel="stylesheet" type="text/css" href="../stylesheets/trivia.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     <script src="trivia.js"></script>
@@ -52,8 +52,8 @@
 
     <div id="question-container">
         <p id="question-text">This is where the question will appear.</p>
-        <div id="answer-options">
-            <!-- Answer buttons will be inserted here dynamically -->
+        <div id="answer-options" >
+            
         </div>
     </div>
 

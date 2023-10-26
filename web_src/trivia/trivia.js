@@ -32,20 +32,28 @@ function displayRandomQuestion() {
 function checkAnswer(selectedAnswer) {
     const correctAnswer = triviaQuestions[currentQuestionIndex].correctAnswer;
     if (selectedAnswer === correctAnswer) {
-        document.body.style.backgroundColor = "green";
+        document.getElementById("question-container").classList.add("green-background"); // Add green background class
         setTimeout(() => {
-            document.body.style.backgroundColor = "";
+            document.getElementById("question-container").classList.remove("green-background"); // Remove green background class
             currentQuestionIndex++;
             if (currentQuestionIndex < triviaQuestions.length) {
                 displayRandomQuestion();
             } else {
-                alert("Congratulations! You've completed the trivia.");
+                const confirmation = confirm("Congratulations! You've completed the trivia. Click OK to go to the game page.");
+                if (confirmation) {
+                    window.location.href = "../games/menu.php";
+                }
             }
         }, 1000);
     } else {
-        alert("You are wrong dumbass!!!")
+        document.getElementById("question-container").classList.add("red-background");
+        setTimeout(() => {
+            document.getElementById("question-container").classList.remove("red-background");
+    }, 1000);
     }
 }
+
+
 
 window.onload = displayRandomQuestion;
 
