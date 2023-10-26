@@ -17,7 +17,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link" href="../../general/home.php">
+                    <a class="nav-link" href="../../general/index.php">
                         <i class="fas fa-home"></i> Home
                     </a>
                 </li>

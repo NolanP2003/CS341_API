@@ -63,4 +63,18 @@ body {
     margin-right: auto;
 }
 
+footer {
+    display: block;
+    padding: 10px;
+    background-color: #004B98;
+    text-align: center;
+    color: white;
+}
+
+.fa {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+}
+
 /* TO-DO Style Settings Page */

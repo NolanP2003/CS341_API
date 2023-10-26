@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    
 </head>
 <body>
     <header>
@@ -25,6 +28,11 @@
                     <li class="nav-item">
                         <a class="nav-link" href="settings.php">
                             <i class="fas fa-cog"></i> Settings
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.php">
+                            <i class="fas fa-info-circle"></i> About
                         </a>
                     </li>
                     <li class="nav-item">
@@ -49,7 +57,22 @@
                 to play.
             </div>
         </section>
+        <section id="game">
+            <br>
+            <div id="welcome-text">Start Playing</div>
+            <br>
+            <div id="welcome-subtext">Answer a trivia question, play a round of hangman! 
+                Learn more about Elizabethtown and try to get on the leaderboard!
+            </div>
+            <br>
+            <!-- Links start button image and uses that to route to game menu. -->
+            <a href="../games/menu.php"><img src = "../includes/images/start_button.png" class="center" width='140px.'></a>
+            <br><br><br>
+        </section>
     </main>
 
 </body>
 </html>
+<?php
+require_once "../includes/footer.php";
+?>
