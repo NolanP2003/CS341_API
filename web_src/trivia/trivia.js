@@ -1,13 +1,13 @@
 const triviaQuestions = [
     {
-        question: "What is the capital of France?",
-        answers: ["Paris", "London", "Berlin", "Madrid"],
-        correctAnswer: "Paris"
+        question: "What is the name of the bluejay?",
+        answers: ["Blue", "Joe", "Steve", "Johnny"],
+        correctAnswer: "Blue"
     },
     {
-        question: "What is the largest planet in our solar system?",
-        answers: ["Earth", "Mars", "Jupiter", "Venus"],
-        correctAnswer: "Jupiter"
+        question: "What is the name of the campus therapy dog?",
+        answers: ["Doug", "Max", "Truman", "Buster"],
+        correctAnswer: "Truman"
     },
     // Add more questions and answers as needed
 ];

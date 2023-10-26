@@ -1,12 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // const wordList = ["TRUMAN", "CONRAD", "BLUEJAY", "BOWERS", "FOUNDERS", "SCHLOSSER", "ELIZABETHTOWN", "JAYNEST", "THOMPSON", "BRINSER"];
-    // His name is actually blue, according to an anonymous user
-    // NO HIS NAME WILL NEVER BE BLUE I REFUSE!!!!!!!!!!!!!!!!
-    
-    let word = ''; // selectRandomWord(wordList);
-    let guessedWord = ''; // initializeGuessedWord(word);
+    let word = '';
+    let guessedWord = '';
     let attempts = 6;
-    randomWord(); // Doesn't return anything, so no variable
 
     const wordDisplay = document.getElementById("word-display");
     const guessInput = document.getElementById("guess");
@@ -15,48 +10,39 @@ document.addEventListener("DOMContentLoaded", function () {
     const guessedLettersList = document.getElementById("guessed-letters-list");
     const guessedLetters = [];
 
-    // renderWordDisplay();
-    
+    // Initial setup
+    randomWord();
+
+    // Event listener for clicking the "Guess" button
     guessButton.addEventListener("click", function () {
-        const guess = guessInput.value.toUpperCase();
-        if (guess.length === 1 && guess.match(/[A-Z]/)) {
-            handleGuess(guess);
-        } else {
-            alert("Please enter a single letter.");
-        }
+        handleGuess(guessInput.value.toUpperCase());
         guessInput.value = "";
     });
 
-    guessButton.addEventListener("keypress", function (event) {
+    // Event listener for Enter key presses in the guess input field
+    guessInput.addEventListener("keypress", function (event) {
         const guess = guessInput.value.toUpperCase();
         if (event.key === "Enter") {
-            
             if (guess.length === 1 && guess.match(/[A-Z]/)) {
                 handleGuess(guess);
             } else {
                 alert("Please enter a single letter.");
             }
-            
-            console.log("Keypress event detected:", event.key);
+            guessInput.value = "";
             event.preventDefault();
-            
-            
         }
-        guessInput.value = "";
     });
 
-    /* Selecting a random word Take 2 */
     function randomWord() {
-        // TODO: Change file path for FTP
-        fetch('http://localhost/CS341_API/data_src/api/hangman/word.php', {method: 'get',}) // (CS363 GET; Default?)
-            .then(response => response.json()) // get response from json, {poof} data, store in response
-            .then(data => {word = data.word; guessedWord = initializeGuessedWord(word); renderWordDisplay();}) // takes word value and stores it in var word 
-            .catch(console.error); // Erroring?
-    } // r and d are parameters in the arrow function
-    
-    /*function selectRandomWord(wordList) { Sorry, Nolan
-        return wordList[Math.floor(Math.random() * wordList.length)];
-    } */
+        fetch('http://localhost/CS341_API/data_src/api/hangman/word.php', { method: 'get' })
+            .then(response => response.json())
+            .then(data => {
+                word = data.word;
+                guessedWord = initializeGuessedWord(word);
+                renderWordDisplay();
+            })
+            .catch(console.error);
+    }
 
     function initializeGuessedWord(word) {
         return "_".repeat(word.length).split("");
@@ -67,12 +53,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function handleGuess(letter) {
-       
         if (attempts > 0) {
             if (guessedLetters.includes(letter)) {
                 alert(letter + " has already been guessed.");
-            }
-            else if (word.includes(letter)) {
+            } else if (word.includes(letter)) {
                 guessedLetters.push(letter);
                 guessedLettersList.textContent = guessedLetters.join(", ");
                 for (let i = 0; i < word.length; i++) {
@@ -87,9 +71,8 @@ document.addEventListener("DOMContentLoaded", function () {
             } else {
                 attempts--;
                 attemptCount.textContent = attempts;
-                guessedLetters.push(letter); // get guessed letter
-                guessedLettersList.textContent = guessedLetters.join(", "); // put guessed letter into a list
-                
+                guessedLetters.push(letter);
+                guessedLettersList.textContent = guessedLetters.join(", ");
                 if (attempts === 0) {
                     endGame("Sorry, you're out of attempts. The word was: " + word);
                 }
