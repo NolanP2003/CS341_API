@@ -10,7 +10,7 @@ body {
 }
 
 .navbar {
-    background-color: #1266AC;
+    background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
     text-align: center;
     padding: 10px;
 }
@@ -23,6 +23,8 @@ body {
 
 h1 {
     margin: 20px 0;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
 }
 
 main {

@@ -41,6 +41,7 @@
 
     <main>
         <section id="welcome">
+            <br>
             <div id="welcome-text">Our Vision</div>
             <br>
             <div id="welcome-subtext">This website will primarily be used for open houses and 

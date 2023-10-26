@@ -6,19 +6,20 @@ body {
 }
 
 
-header {
-    background-color: #1266AC;
-    color: #fff;
+/* header {
+    background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
+    color: #C8C8C8;
     text-align: center;
     padding: 10px;
 }
+*/
 
 #logo {
     max-width: 100px;
 }
 
 .navbar {
-    background-color: #1266AC;
+    background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
     text-align: center;
     padding: 10px;
 }
@@ -36,11 +37,15 @@ header {
 
 #welcome-text {
     font-size: 36px;
+    font-family: "Georgia", Times, serif;
     text-align: center;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
 }
 
 #welcome-subtext {
     text-align: center;
+    color: #000000;
     max-width: 1000px;
     margin: auto;
     font-size: 24px;
@@ -51,8 +56,11 @@ header {
     flex-wrap: wrap;
     justify-content: center;
 }
+
 .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
 }
+
+/* TO-DO Style Settings Page */

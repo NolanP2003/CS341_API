@@ -88,6 +88,7 @@
 
     <main>
         <section id="game">
+            <br>
             <div id="welcome-text">Hangman Settings</div>
             <form action="../../data_src/api/hangman/add.php" method="post" id="add-word">
                 Add A Word: <input type="text" name="word"><br>

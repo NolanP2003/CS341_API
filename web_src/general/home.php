@@ -45,7 +45,8 @@
 
     <main>
         <section id="welcome">
-            <div id="welcome-text">Welcome to the Etown gaming website!</div>
+            <br>
+            <div id="welcome-text">Welcome to the Etown Gaming Website!</div>
             <br>
             <div id="welcome-subtext">This website will primarily be used for open houses and 
                 new student events to introduce them to some of the
@@ -56,6 +57,7 @@
             </div>
         </section>
         <section id="game">
+            <br>
             <div id="welcome-text">Start Playing</div>
             <br>
             <div id="welcome-subtext">Answer a trivia question, play a round of hangman! 

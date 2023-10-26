@@ -1,13 +1,16 @@
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: veranda, sans-serif;
     text-align: center;
     background-color: #DAD9D9 !important;
 }
 
 #welcome-message {
-    font-size: 24px;
+    font-size: 32px;
     margin-top: 20px;
-    color: #333;
+    text-align: center;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
 }
 
 #logo {
@@ -15,7 +18,7 @@ body {
 }
 
 .navbar {
-    background-color: #1266AC;
+    background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
     text-align: center;
     padding: 10px;
 }
@@ -28,6 +31,7 @@ body {
 
 #game-select {
     margin-top: 20px;
+    text-align: center;
 }
 
 select {
@@ -38,10 +42,9 @@ select {
 label {
     font-weight: bold;
     margin-right: 10px;
-    color: #333;
+    color: #0A2240;
 }
 
-/* Style the dropdown select box */
 select {
     background-color: #fff;
     border: 1px solid #ccc;
@@ -49,3 +52,6 @@ select {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     width: 200px;
 }
+
+
+
