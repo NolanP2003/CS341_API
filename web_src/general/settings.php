@@ -51,7 +51,7 @@
 
             function updateWordList() {
                 const wordList = document.getElementById("word-list");
-                fetch('http://localhost/CS341_API/data_src/api/hangman/list.php', {method: 'get'})
+                fetch('http://localhost/CS341_API/data_src/api/hangman/list.php', {method: 'get'}) // TODO: Change file path for FTP
                     .then(response => response.json())
                     .then(data => {wordList.innerHTML = data.join('<br>');}).catch(console.error);
             }

@@ -47,6 +47,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     /* Selecting a random word Take 2 */
     function randomWord() {
+        // TODO: Change file path for FTP
         fetch('http://localhost/CS341_API/data_src/api/hangman/word.php', {method: 'get',}) // (CS363 GET; Default?)
             .then(response => response.json()) // get response from json, {poof} data, store in response
             .then(data => {word = data.word; guessedWord = initializeGuessedWord(word); renderWordDisplay();}) // takes word value and stores it in var word 
