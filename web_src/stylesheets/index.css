@@ -57,6 +57,22 @@ body {
     justify-content: center;
 }
 
+#welcome-text-2 {
+    font-size: 30px;
+    font-family: "Georgia", Times, serif;
+    text-align: center;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
+}
+
+#welcome-subtext-2 {
+    text-align: center;
+    color: #000000;
+    max-width: 1000px;
+    margin: auto;
+    font-size: 20px;
+}
+
 .center {
     display: block;
     margin-left: auto;

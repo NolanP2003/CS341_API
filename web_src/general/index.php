@@ -59,9 +59,9 @@
         </section>
         <section id="game">
             <br>
-            <div id="welcome-text">Start Playing</div>
+            <div id="welcome-text-2">Start Playing</div>
             <br>
-            <div id="welcome-subtext">Answer a trivia question, play a round of hangman! 
+            <div id="welcome-subtext-2">Answer a trivia question, play a round of hangman! 
                 Learn more about Elizabethtown and try to get on the leaderboard!
             </div>
             <br>

@@ -54,11 +54,12 @@
             <br>
         </section>
         <section id="team">
-            <div id="welcome-text">Founding Team</div>
+            <div id="welcome-text-2">Founding Team</div>
             <br>
-            <div id="welcome-subtext">Our team came together during Professor Reddig's Software Engineering class.
+            <div id="welcome-subtext-2">Our team came together during Professor Reddig's Software Engineering class.
                 We had a vision and creative freedom, and here we are.
         </div>
+        <br><br>
     </main>
 </body>
 </html>
