@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Hangman Game</title>
-    <link rel="stylesheet" type="text/css" href="../../stylesheets/hangman.css">
+    <title>Pacman Games</title>
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/pacman.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
@@ -46,7 +46,10 @@
         <div id="stub-text">
             Pacman is currently under construction, come back soon! 
             <br>
-            <img id="underconstruction" src="../../../web_src/games/flappybird/images/bluejay.gif" alt="Bluejay">
+            <div class="pacman-container">
+            <br>
+            <img id="underconstruction" src="../../../web_src/games/pacman/images/bluejay.gif" alt="Bluejay">
+            <br>
         </div>
     </main>
 

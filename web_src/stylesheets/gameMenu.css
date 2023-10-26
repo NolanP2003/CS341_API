@@ -14,7 +14,8 @@ body {
 }
 
 #logo {
-    max-width: 100px;
+    height: 80px;
+    width: 150px;
 }
 
 .navbar {
