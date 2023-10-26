@@ -1,0 +1,68 @@
+
+body {
+    font-family: veranda, sans-serif;
+    text-align: center;
+    background-color: #DAD9D9 !important;
+}
+
+#welcome-message {
+    font-size: 32px;
+    margin-top: 20px;
+    text-align: center;
+    color: #004B98;
+    text-shadow: 2px 2px 4px #3DB5E6;
+}
+
+#logo {
+    max-width: 100px;
+}
+
+.navbar {
+    background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
+    text-align: center;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+}
+
+#game-select {
+    margin-top: 20px;
+    text-align: center;
+}
+
+select {
+    font-size: 18px;
+    padding: 5px;
+}
+
+label {
+    font-weight: bold;
+    margin-right: 10px;
+    color: #0A2240;
+}
+
+select {
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 200px;
+}
+
+.green-background {
+    background-color: green;
+    max-width: 500px;
+}
+
+.red-background {
+    background-color: red;
+    max-width: 500px;
+}
+
+.hidden {
+    display: none;
+}
