@@ -51,7 +51,6 @@
     </div>
 
     <div id="question-container">
-        <p id="question-text">This is where the question will appear.</p>
         <div id="answer-options" >
             
         </div>
