@@ -1,5 +1,5 @@
 use u413142534_quizgames;
-SELECT * FROM hangman;
+
 CREATE TABLE IF NOT EXISTS user (
     userID INT AUTO_INCREMENT,
     username VARCHAR(50) NOT NULL,
@@ -101,6 +101,12 @@ INSERT INTO trivia (question) VALUES ("What is Etown's most popular program?");
 INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (13, "Occupational Therapy", TRUE);
 INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (13, "Computer Science", FALSE);
 INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (13, "Business", FALSE);
+
+# Question 14 and answers
+INSERT INTO trivia (question) VALUES ("Who's the first Pantry Coordinator?");
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (14, "Ariea O'Krepka", TRUE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (14, "Professor Reddig", FALSE);
+INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (14, "Thomas Leap", FALSE);
 
 # Populating hangman with words
 INSERT INTO hangman (word) VALUES ("TRUMAN");

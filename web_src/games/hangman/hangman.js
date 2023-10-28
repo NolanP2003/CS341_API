@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const guessButton = document.getElementById("guess-button");
     const attemptCount = document.getElementById("attempt-count");
     const guessedLettersList = document.getElementById("guessed-letters-list");
+    const birdPics = document.getElementById("bird-cycle");
     const guessedLetters = [];
 
     // Initial setup
@@ -44,6 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             .catch(console.error);
     }
 
+    // Be able to handle spaces?
     function initializeGuessedWord(word) {
         return "_".repeat(word.length).split("");
     }
@@ -66,10 +68,22 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
                 renderWordDisplay();
                 if (guessedWord.join("") === word) {
+                    //birdPics.src = "../../../web_src/games/hangman/nest.png";
                     endGame("Congratulations! You guessed the word: " + word);
                 }
             } else {
                 attempts--;
+                if (attempts === 5) { // Bird Life Cycle
+                    birdPics.src = "../../../web_src/games/hangman/images/egg in nest.png";
+                } else if (attempts === 4) {
+                    birdPics.src = "../../../web_src/games/hangman/images/cracked egg.png";
+                } else if (attempts === 3) {
+                    birdPics.src = "../../../web_src/games/hangman/images/open egg.png";
+                } else if (attempts === 2) {
+                    birdPics.src = "../../../web_src/games/hangman/images/baby bird.png";
+                } else if (attempts === 1) {
+                    birdPics.src = "../../../web_src/games/hangman/images/bluejay.png";
+                }
                 attemptCount.textContent = attempts;
                 guessedLetters.push(letter);
                 guessedLettersList.textContent = guessedLetters.join(", ");
@@ -81,6 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function endGame(message) {
+        birdPics.src = "../../../web_src/games/hangman/images/flyer.png"; // Bird flies away cause you're dumb
         alert(message);
         guessInput.disabled = true;
         guessButton.disabled = true;

@@ -10,7 +10,7 @@ if ($connection->connect_error) {
 }
 
 $question = "SELECT t.question AS question FROM trivia t JOIN answer a ON t.questionID = a.questionID 
-    WHERE a.is_Correct = 1 ORDER BY RAND() LIMIT 1;"; // Choose a random question
+    ORDER BY RAND() LIMIT 1;"; // Choose a random question
 $qResult = $connection->query($question);
 
 if ($qResult->num_rows > 0) {

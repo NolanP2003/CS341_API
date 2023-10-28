@@ -59,6 +59,8 @@
             <h2>Guessed Letters</h2>
             <div id="guessed-letters-list"></div>
         </div>
+        <br>
+        <img id="bird-cycle" src="../../../web_src/games/hangman/images/nest.png" width=300 height=300>
     </main>
     <script src="hangman.js"></script>
 </body>

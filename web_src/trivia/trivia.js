@@ -4,6 +4,7 @@ let currentQuestionIndex = 0;
 let count = 0; // Counter for number of Correct Answers
 
 // TODO: Prevent repeat questions
+// Change position of answers?
 
 function displayRandomQuestion() {
     if (triviaQuestions.length > 0 && currentQuestionIndex < triviaQuestions.length) { // Explain
