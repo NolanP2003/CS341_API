@@ -3,8 +3,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: #DAD9D9 !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+main {
+    flex-grow: 1;
+}
 
 /* header {
     background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
@@ -81,7 +87,6 @@ body {
 }
 
 footer {
-    display: block;
     padding: 10px;
     background-color: #004B98;
     text-align: center;
