@@ -16,11 +16,11 @@ $sql = $connection->prepare("INSERT INTO user (username) VALUES (UPPER(?));");
 $sql->bind_param("s", $username); // No SQLi allowed
 $sql->execute();
 
-$response = ["status" => "success", "message" => "User added successfully."];
-
-echo json_encode($response);
-
-$sql->close();
 // Close the database connection
+$sql->close();
 $connection->close();
+
+// After adding the username to the database, redirect to trivia.php
+header("Location: ../../../web_src/trivia/trivia.php");
+exit();
 ?>
