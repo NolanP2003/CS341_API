@@ -36,6 +36,11 @@
                         <i class="fas fa-gamepad"></i> Games
                     </a>
                 </li>
+                <li class="nav-item">
+                        <a class="nav-link" href="../../general/login.php">
+                            <i class="fas fa-key"></i> Login
+                        </a>
+                </li>
             </ul>
         </div>
     </nav>

@@ -53,6 +53,7 @@
             <form action="../../data_src/api/user/add.php" method="post" id="add-user" style="text-align: center">
             Enter your username: <input type="text" name="user">
             Enter your email: <input type="text" name="email">
+            Enter your name: <input type="text" name="first">
                 <input type="submit" value="Submit">
             </form>
         </section>
