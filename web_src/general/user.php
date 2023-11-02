@@ -50,9 +50,9 @@
                 <h2 style="text-align:center">User</h2>
             </div> 
             <br>
-            <form action="" method="post" id="add-user" style="text-align: center">
+            <form action="../../data_src/api/user/add.php" method="post" id="add-user" style="text-align: center">
             Enter your username: <input type="text" name="user">
-            <input type="submit" value="Submit">
+                <input type="submit" value="Submit">
             </form>
         </section>
     </main>
