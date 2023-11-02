@@ -5,6 +5,7 @@ CREATE TABLE IF NOT EXISTS user (
     username VARCHAR(50) NOT NULL,
     email VARCHAR(255) NOT NULL,
     date DATE,
+    firstname VARCHAR(255) NOT NULL,
     PRIMARY KEY (userID)
 );
 
@@ -12,6 +13,8 @@ ALTER TABLE user
 ADD email VARCHAR(255);
 ALTER TABLE user
 ADD date DATE;
+ALTER TABLE user
+ADD firstname VARCHAR(255) NOT NULL;
 
 CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
 	questionID INT AUTO_INCREMENT,
