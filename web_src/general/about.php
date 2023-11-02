@@ -61,8 +61,11 @@
         </div>
         <br><br>
     </main>
+
+    <footer>
+        <?php
+        require_once "../includes/footer.php";
+        ?>
+    </footer>
 </body>
 </html>
-<?php
-require_once "../includes/footer.php";
-?>
