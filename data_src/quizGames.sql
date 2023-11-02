@@ -3,8 +3,16 @@ use u413142534_quizgames;
 CREATE TABLE IF NOT EXISTS user (
     userID INT AUTO_INCREMENT,
     username VARCHAR(50) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    date DATE,
     PRIMARY KEY (userID)
 );
+
+ALTER TABLE user
+ADD email VARCHAR(255);
+ALTER TABLE user
+ADD date DATE;
+
 CREATE TABLE IF NOT EXISTS trivia ( # We have to return the question ID
 	questionID INT AUTO_INCREMENT,
     question VARCHAR(255) NOT NULL,
@@ -119,3 +127,5 @@ INSERT INTO hangman (word) VALUES ("ELIZABETHTOWN");
 INSERT INTO hangman (word) VALUES ("JAYNEST");
 INSERT INTO hangman (word) VALUES ("THOMPSON");
 INSERT INTO hangman (word) VALUES ("BRINSER");
+
+INSERT INTO user (username, email, date) VALUES ("user1", "fakeemail@something.com", DATE_FORMAT(NOW(), '%Y-%m-%d'));
