@@ -39,19 +39,20 @@
             </ul>
         </div>
     </nav>
-
-    <main>
-        <h1>Pacman</h1>
-    
-        <div id="stub-text">
-            Pacman is currently under construction, come back soon! 
-            <br>
-            <div class="pacman-container">
-            <br>
-            <img id="underconstruction" src="../../../web_src/games/pacman/images/bluejay.gif" alt="Bluejay">
-            <br>
-        </div>
-    </main>
+<div class="pacman-container">
+    <svg id="pacmanSVG"
+         version="1.1"
+         baseProfile="full"
+         width="550"
+         height="550"
+         viewbox="0 0 400 400">
+    </svg>
+    <script src="pacman.js"></script>
+    <div>
+    <p>Content provided by Johan Hasselqvist and Lars Gunther.</p>
+    <p>Source: <a href="https://github.com/Hasselmannen/pacman/blob/master/README.markdown">Johan Hasselqvist's GitHub</a></p>
+    </div>
+</div>
 
 </body>
 </html>

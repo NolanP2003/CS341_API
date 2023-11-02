@@ -6,6 +6,8 @@ body {
     background-color: #DAD9D9 !important;
 }
 
+
+
 #logo {
     height: 80px;
     width: 150px;
@@ -35,32 +37,10 @@ main {
     padding-top: 15px;
 }
 
-#welcome-text {
-    font-size: 36px;
-    font-family: "Georgia", Times, serif;
-    text-align: center;
-    color: #004B98;
-    text-shadow: 2px 2px 4px #3DB5E6;
-}
-
-#underconstruction {
-    height: 300px;
-    width: 400px; 
-}
-
 .pacman-container {
     margin: 0 auto;
     text-align: center;
-    padding: 20px;
-    max-width: 450px;
-    border-top-style: dotted;
-    border-right-style: solid;
-    border-bottom-style: dotted;
-    border-left-style: solid;
-    background-color: #0A2240;
-    position: relative;
-    animation-name: pacman-container;
-    animation-duration: 4s;
+    position: relative; 
 }
 
 @keyframes pacman-container {
@@ -72,8 +52,73 @@ main {
   }
 
 
-  
- 
-
-
-
+svg {
+    background-color: black;
+    border: 3px solid blue;
+    border-radius: 9px;
+}
+#player circle {
+    fill: yellow;
+}
+rect {
+    stroke: blue;
+    stroke-width: 3;
+}
+#ghost_box {
+    stroke: blue;
+    stroke-width: 3;
+}
+.ghost_btm {
+    stroke: none;
+}
+.ghost_eye {
+    fill: black;
+    stroke: white;
+    stroke-width: 2;
+}
+#ghost1 {
+    fill: red;
+}
+#ghost2 {
+    fill: cyan;
+}
+#ghost3 {
+    fill: green;
+}
+#ghost4 {
+    fill: pink;
+}
+#ghost5 {
+    fill: orange;
+}
+#win_or_lose_text {
+    fill: white;
+    font-size: 80px;
+    text-anchor: middle;
+}
+#score_text {
+    text-anchor: middle;
+    fill: white;
+}
+#play_text {
+    text-anchor: middle;
+    fill: white;
+}
+.ball {
+    fill: white;
+}
+.ghosts {
+    fill: purple;
+}
+#cherry {
+    display: none;
+}
+#cherry > circle {
+    fill: #F03;
+    stroke: black;
+    stroke-width: 1;
+}
+#cherry > path {
+    stroke: green;
+    stroke-width: 2;
+}
