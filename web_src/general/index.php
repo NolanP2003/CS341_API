@@ -66,7 +66,7 @@
             </div>
             <br>
             <!-- Links start button image and uses that to route to game menu. -->
-            <a href="../trivia/trivia.php"><img src = "../includes/images/start_button.png" class="center" width='140px.'></a>
+            <a href="user.php"><img src = "../includes/images/start_button.png" class="center" width='140px.'></a>
             <br><br><br>
         </section>
     </main>
