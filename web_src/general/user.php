@@ -51,9 +51,9 @@
             </div> 
             <br>
             <form action="../../data_src/api/user/add.php" method="post" id="add-user" style="text-align: center">
-            Enter your username: <input type="text" name="user">
-            Enter your email: <input type="text" name="email">
-            Enter your name: <input type="text" name="first">
+            Enter your username: <input type="text" name="user" required>
+            Enter your email: <input type="text" name="email" required>
+            Enter your name: <input type="text" name="first" required>
                 <input type="submit" value="Submit">
             </form>
         </section>
