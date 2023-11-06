@@ -59,13 +59,13 @@
                 <button id="guess-button" tabindex="0">Guess</button>
             </div>
         </div>
-
+        <img id="bird-cycle" align="right" src="../../../web_src/games/hangman/images/nest.png" width=300 height=300>
         <div id="guessed-letters-box">
             <h2>Guessed Letters</h2>
             <div id="guessed-letters-list"></div>
         </div>
         <br>
-        <img id="bird-cycle" src="../../../web_src/games/hangman/images/nest.png" width=300 height=300>
+       
     </main>
     <script src="hangman.js"></script>
 </body>
