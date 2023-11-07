@@ -51,11 +51,14 @@
     </div>
 
     <div id="question-container">
-        <div id="answer-options" >
+        <!-- ><div id="answer-options" >
             
-        </div>
+        </div> -->
     </div>
 
+    <div id="answer-options">
+
+    </div>
 
     <!-- <div id="game-select">
         <label for="game-selector">Select a game: </label>

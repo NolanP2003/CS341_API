@@ -4,21 +4,25 @@ let currentQuestionIndex = 0;
 let count = 0; // Counter for number of Correct Answers
 
 // TODO: Prevent repeat questions
-// TODO: position of answers?
+// TODO: Position of answers
 
 function displayRandomQuestion() {
     if (triviaQuestions.length > 0 && currentQuestionIndex < triviaQuestions.length) { // Explain
         const questionContainer = document.getElementById("question-container");
         const question = triviaQuestions[currentQuestionIndex].question;
-        const answers = triviaQuestions[currentQuestionIndex].answers;
+        const answers = triviaQuestions[currentQuestionIndex].answers.slice();
 
+        shuffle(answers);
         questionContainer.innerHTML = `<p>${question}</p>`;
+
+        const answerOptions = document.getElementById("answer-options");
+        answerOptions.innerHTML = ''; // Clear previous buttons
 
         answers.forEach(answerData=> {
             const answerButton = document.createElement("button");
             answerButton.textContent = answerData.answer;
             answerButton.addEventListener("click", () => checkAnswer(answerData.isCorrect));
-            questionContainer.appendChild(answerButton);
+            answerOptions.appendChild(answerButton);
         });
     }
 }
@@ -64,6 +68,14 @@ function confirmationMessage() { // You too can be told you are valid
         window.location.href = "../games/menu.php";
     }
 }
+
+function shuffle(array) {
+    for (let i = array.length - 1; i > 0; i--) { // For whole array
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]]; // Swap
+    }
+    // return array;
+  }
 
 
 window.onload = randomQuestion;

@@ -9,7 +9,13 @@ if ($connection->connect_error) {
     die("Connection failed: ".$connection->connect_error);
 }
 
-$word = $_POST["word"]; // Receive the Word of User
+if (isset($_POST["word"]) && !empty($_POST["word"]) && preg_match('/^[A-Za-z]+$/', $word)) {
+    $word = $_POST["word"]; // Receive the Word of User
+} else {
+    $response = ["status" => "Error", "message" => "Invalid or empty"];
+    echo json_encode($response);
+    exit;
+}
 
 $sql = $connection->prepare("SELECT word FROM hangman WHERE word = UPPER(?);");
 $sql->bind_param("s", $word);
