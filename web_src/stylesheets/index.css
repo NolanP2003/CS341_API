@@ -12,14 +12,6 @@ main {
     flex-grow: 1;
 }
 
-/* header {
-    background-image: linear-gradient(to right, #fff, #C8C8C8, #3DB5E6, #004B98);
-    color: #C8C8C8;
-    text-align: center;
-    padding: 10px;
-}
-*/
-
 #logo {
     height: 80px;
     width: 150px;
@@ -99,4 +91,4 @@ footer {
     color: white;
 }
 
-/* TO-DO Style Settings Page */
+
