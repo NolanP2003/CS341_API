@@ -9,7 +9,13 @@ if ($connection->connect_error) {
     die("Connection failed: ".$connection->connect_error);
 }
 
-$questionID = $_POST["questionID"];
+if (isset($_POST["questionID"]) && !empty($_POST["questionID"])) {
+    $questionID = $_POST["questionID"];
+} else {
+    $response = ["status" => "Error", "message" => "Question ID required."];
+    echo json_encode($response);
+    exit();
+}
 
 $sql = $connection->prepare("SELECT question FROM trivia WHERE questionID = (?);");
 $sql->bind_param("i", $questionID);
@@ -17,14 +23,15 @@ $sql->execute();
 $data = $sql->get_result();
 
 if ($data->num_rows == 0) { // If nothing comes up
-    // $message = ["message" => "Word is not in the Database"];
     $response = ["status" => "Error", "message" => "Question is not in the database."];
-} elseif ($data->num_rows == 1) { // There should only be one row, unneccessary?
-    $sql = $connection->prepare("DELETE FROM trivia WHERE questionID = (?);");
+} elseif ($data->num_rows == 1) {
+    $sql = $connection->prepare("DELETE FROM answer WHERE questionID = (?);");
     $sql->bind_param("i", $questionID);
     $sql->execute();
 
-    // $message = ["message" => "Deleted a question successfully", "questionID" => $questionID];
+    $sql = $connection->prepare("DELETE FROM trivia WHERE questionID = (?);");
+    $sql->bind_param("i", $questionID);
+    $sql->execute();
     $response = ["status" => "success", "message" => "Deleted a question."];
 }
 
