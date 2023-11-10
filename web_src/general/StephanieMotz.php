@@ -50,7 +50,7 @@
 
     <main>
         <div class="buttons">
-        <a href="foundingteam.php"><button class="button backButton">Go Back!</button></a> 
+        <a href="foundingteam.php"><button class="button button2">Go Back!</button></a> 
         </div>
 
         <section id="Steph's Bio">
