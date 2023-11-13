@@ -200,18 +200,22 @@ var SVGNS = "http://www.w3.org/2000/svg";
         function pacman() {
             document.getElementById("score_text").innerHTML = "Score: " + parseInt((score - time_taken / 10), 10);
 
+            // var scoreElement = document.getElementById("current-score");
+            // scoreElement.textContent = parseInt((score - time_taken / 10), 10);
+
+
             if (power_pellets === 61) {
-                score += 1000;
+                // scoreElement += 1000;
                 win_or_lose_text.innerHTML = "You won";
-                document.getElementById("win-container").innerHTML = "Score: " + parseInt((score - time_taken / 10), 10);
-                document.getElementById("win-container").classList.remove("hidden");
+                document.getElementById("score-container").innerHTML = "Score: " + parseInt((score - time_taken / 10), 10);
+                document.getElementById("score-container").classList.remove("hidden");
                 document.getElementById("pacmanSVG").appendChild(play_text);
                 playingPacman = false;
                 return;
             } else if (eaten_by_ghosts === true) {
                 win_or_lose_text.innerHTML = "Game over";
-                document.getElementById("win-container").innerHTML = "Score: " + parseInt((score - time_taken / 10), 10);
-                document.getElementById("win-container").classList.remove("hidden");
+                document.getElementById("score-container").innerText = "Score: " + parseInt((score - time_taken / 10), 10);
+                document.getElementById("score-container").classList.remove("hidden");
                 document.getElementById("pacmanSVG").appendChild(play_text);
                 playingPacman = false;
                 return;

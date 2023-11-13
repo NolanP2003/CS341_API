@@ -71,21 +71,6 @@ svg {
     animation: bounce 3s linear;
 }
 
-/* @keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    25% {
-        transform: translateY(-10px);
-    }
-    50% {
-        transform: translateY(0);
-    }
-    75% {
-        transform: translateY(10px);
-    }
-} */
-
 #player circle {
     fill: yellow;
 }
@@ -176,16 +161,38 @@ rect {
     stroke-width: 2;
 }
 
-#win-container {
+/* #win-container {
     text-align: center;
     border: 2px solid black;
-    /* max-width: 50%; */
     display: flex;
     max-width: 33%;
     justify-content: left;
     align-items: left;
-}
+} */
 
 .hidden {
     display: none !important;
 }
+
+/* .score-container {
+    position: absolute;
+    top: 25;
+    right: 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #004B98;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#score {
+    margin: auto;
+    color: #004B98;
+    font-weight: bold;
+}
+
+#current-score {
+    color: #FFD700; 
+    /* font-size: 18px; 
+    margin-left: 5px; */
+/* } */
