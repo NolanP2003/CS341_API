@@ -17,15 +17,21 @@
                 e.preventDefault(); // Prevents page from reloading to add.php?
                 const formData = new FormData(form); // Access to the form data, to send AJAX request
 
+               
                 fetch(form.getAttribute("action"), { // Makes HTTP request
                     method: "POST", body: formData // Sends POST request with form data
                 }).then(response => response.json()) // then expects response in JSON format
                 .then(data => {message.textContent = data.message; message2.textContent = ''; input.value = ''; // Sets message and clears text field
                     message.style.color = data.status === "success" ? "green" : "red"; // Changes color if successful
                     updateWordList();
+                    console.log("here");
                 }).catch(error => { // Error
+                    
+                    console.log("here with form action of " + form.getAttribute("action"));
+                    console.log("here with response of " + new XMLSerializer().serializeToString(response));
                     message.textContext = "An error occurred.";
                     message.style.color = "red";
+                    
                 });
             });
 
@@ -48,7 +54,6 @@
                     message2.style.color = "red";
                 });
             });
-
             function updateWordList() {
                 const wordList = document.getElementById("word-list");
                 fetch('http://localhost/CS341_API/data_src/api/hangman/list.php', {method: 'get'}) // TODO: Change file path for FTP

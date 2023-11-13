@@ -39,6 +39,10 @@
             </ul>
         </div>
     </nav>
+<main>
+    
+    
+    <h1 id="Welcome">Welcome to Pac-Man! Click the screen to start the game.</h1>
 <div class="pacman-container">
     <svg id="pacmanSVG"
          version="1.1"
@@ -49,10 +53,18 @@
     </svg>
     <script src="pacman.js"></script>
     <div>
-    <p>Content provided by Johan Hasselqvist and Lars Gunther.</p>
-    <p>Source: <a href="https://github.com/Hasselmannen/pacman/blob/master/README.markdown">Johan Hasselqvist's GitHub</a></p>
+        <p>Content provided by Johan Hasselqvist and Lars Gunther.</p>
+        <p>Source: <a href="https://github.com/Hasselmannen/pacman/blob/master/README.markdown">Johan Hasselqvist's GitHub</a></p>
     </div>
 </div>
+<!-- <div class="score-container">
+    <p id="score">Score: <span id="current-score">0</span></p>
+</div> -->
 
+
+<!-- <aside id="win-container" class="hidden">
+    <p>hello</p>
+</aside> -->
+</main>
 </body>
 </html>

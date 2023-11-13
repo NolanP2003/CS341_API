@@ -81,7 +81,7 @@ var SVGNS = "http://www.w3.org/2000/svg";
         var player_pos;
         var pacman_current_key;
         var player_travel_dir;
-        var player_speed = 2;
+        var player_speed = 5;
         var opening_mouth = false;
         var mouth_width = 0;
         var eaten_by_ghosts = false;
@@ -120,14 +120,37 @@ var SVGNS = "http://www.w3.org/2000/svg";
             ghosts_colors[ghost_nr] = 'purple';
             edible_ghosts[ghost_nr] = false;
             edible_ghosts_timers[ghost_nr] = 0;
-            ghosts_speeds[ghost_nr] = 2;
+            ghosts_speeds[ghost_nr] = 1;
         }
+
+        // for (var ghost_nr = 1; ghost_nr <= nrGhosts; ghost_nr++) {
+        //     newElement = document.createElementNS(SVGNS, "image");
+        //     newElement.setAttributeNS(XLinkNS, "href", "ghost" + ghost_nr + ".png");
+
+        //     newElement.setAttribute("x", 160 + 40 * ((ghost_nr -1) % 3));
+        //     newElement.setAttribute("y", 160 + 40 * parseInt((ghost_nr - 1) / 3));
+        //     newElement.setAttribute("width", "24");
+        //     newElement.setAttribute("height", "26");
+        //     newElement.setAttribute("id", "ghost" + ghost_nr);
+        //     newElement.setAttribute("class", "ghosts");
+        //     document.getElementById("pacmanSVG").appendChild(newElement);
+
+
+        //     ghosts[ghost_nr] = newElement;
+        //     ghosts_colors[ghost_nr] = 'purple';
+        //     edible_ghosts[ghost_nr] = false;
+        //     edible_ghosts_timers[ghost_nr] = 0;
+        //     ghosts_speeds[ghost_nr] = 1;
+        // }
+
+
 
         ghosts_colors[1] = 'red';
         ghosts_colors[2] = 'cyan';
         ghosts_colors[3] = 'green';
         ghosts_colors[4] = 'pink';
         ghosts_colors[5] = 'orange';
+
         // End of ghost variables
 
         // Misc variables
@@ -177,13 +200,22 @@ var SVGNS = "http://www.w3.org/2000/svg";
         function pacman() {
             document.getElementById("score_text").innerHTML = "Score: " + parseInt((score - time_taken / 10), 10);
 
+            // var scoreElement = document.getElementById("current-score");
+            // scoreElement.textContent = parseInt((score - time_taken / 10), 10);
+
+
             if (power_pellets === 61) {
+                // scoreElement += 1000;
                 win_or_lose_text.innerHTML = "You won";
+                document.getElementById("score-container").innerHTML = "Score: " + parseInt((score - time_taken / 10), 10);
+                document.getElementById("score-container").classList.remove("hidden");
                 document.getElementById("pacmanSVG").appendChild(play_text);
                 playingPacman = false;
                 return;
             } else if (eaten_by_ghosts === true) {
                 win_or_lose_text.innerHTML = "Game over";
+                document.getElementById("score-container").innerText = "Score: " + parseInt((score - time_taken / 10), 10);
+                document.getElementById("score-container").classList.remove("hidden");
                 document.getElementById("pacmanSVG").appendChild(play_text);
                 playingPacman = false;
                 return;
@@ -381,6 +413,7 @@ var SVGNS = "http://www.w3.org/2000/svg";
                     // End of pacman-ghost collision
 
                     // Ghosts' movement
+
                     if (ghosts_travel_dirs[ghost_nr] === "left") {
                         ghosts[ghost_nr].setAttribute("transform", "translate(" + (ghosts_pos[ghost_nr][1] - ghosts_speeds[ghost_nr]) + "," + (ghosts_pos[ghost_nr][2]) + ")");
                     } else if (ghosts_travel_dirs[ghost_nr] === "up") {
@@ -390,6 +423,17 @@ var SVGNS = "http://www.w3.org/2000/svg";
                     } else {
                         ghosts[ghost_nr].setAttribute("transform", "translate(" + (ghosts_pos[ghost_nr][1]) + "," + (ghosts_pos[ghost_nr][2] + ghosts_speeds[ghost_nr]) + ")");
                     }
+
+                    // if (ghosts_travel_dirs[ghost_nr] === "left") {
+                    //     ghosts[ghost_nr].setAttribute("x", ghosts_pos[ghost_nr][1] - ghosts_speeds[ghost_nr]);
+                    // } else if (ghosts_travel_dirs[ghost_nr] === "up") {
+                    //     ghosts[ghost_nr].setAttribute("y", ghosts_pos[ghost_nr][2] - ghosts_speeds[ghost_nr]);
+                    // } else if (ghosts_travel_dirs[ghost_nr] === "right") {
+                    //     ghosts[ghost_nr].setAttribute("x", ghosts_pos[ghost_nr][1] + ghosts_speeds[ghost_nr]);
+                    // } else {
+                    //     ghosts[ghost_nr].setAttribute("y", ghosts_pos[ghost_nr][2] + ghosts_speeds[ghost_nr]);
+                    // }
+
                     // End of ghosts' movement
 
                 }

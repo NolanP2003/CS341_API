@@ -1,13 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Flappy Bird</title>
-    <link rel="stylesheet" type="text/css" href="../../stylesheets/flappybird.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird Game</title>
+    <link rel="stylesheet" href="../../stylesheets/flappybird.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/pacman.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar bg-blue">
+<nav class="navbar navbar-expand-lg navbar bg-blue">
         <a class="navbar-brand" href="index.php">
             <img id="logo" src="../../includes/images/logo.png" alt="Logo">
         </a>
@@ -39,15 +42,21 @@
             </ul>
         </div>
     </nav>
-
     <main>
-        <h1>Flappy Bird</h1>
-    
-        <div id="stub-text">
-            Flappy Bird is currently under construction, come back soon! 
-            <br>
-            <img id="underconstruction" src="../../../web_src/games/flappybird/images/bluejay.gif" alt="Bluejay">
+        <h1>Welcome to FlappyJay! Use the "Up" arrow to move the bluejay</h1>
+        <div id="score-container">
+            <p id="score-text">Score: 0</p>
         </div>
+    <div id="game-container">
+        <img id="bird" src="images/flappybird.png" alt="Flappy Bird">
+        <div class="pipe" id="pipeTop1"></div>
+        <div class="pipe" id="pipeBottom1"></div>
+        <div class="pipe" id="pipeTop2"></div>
+        <div class="pipe" id="pipeBottom2"></div>
+        
+    </div>
+    <script src="flappybird.js"></script>
     </main>
 </body>
 </html>
+

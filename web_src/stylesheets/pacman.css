@@ -7,7 +7,6 @@ body {
 }
 
 
-
 #logo {
     height: 80px;
     width: 150px;
@@ -30,6 +29,11 @@ h1 {
     margin: 20px 0;
     color: #004B98;
     text-shadow: 2px 2px 4px #3DB5E6;
+    padding: 20px;
+    text-align: center; 
+   
+    
+    
 }
 
 main {
@@ -37,10 +41,18 @@ main {
     padding-top: 15px;
 }
 
+#left {
+    width: 33%;
+    /* align-items: left; */
+    background-color: black;
+}
+
 .pacman-container {
     margin: 0 auto;
     text-align: center;
     position: relative; 
+    width: 50%;
+    
 }
 
 @keyframes pacman-container {
@@ -56,7 +68,9 @@ svg {
     background-color: black;
     border: 3px solid blue;
     border-radius: 9px;
+    animation: bounce 3s linear;
 }
+
 #player circle {
     fill: yellow;
 }
@@ -91,6 +105,30 @@ rect {
 #ghost5 {
     fill: orange;
 }
+/* #ghost1 {
+    background: url(ghost1.png);
+}
+#ghost2 {
+    background-image: url(ghost2.png);
+    background-size: cover;
+}
+#ghost2 {
+    background-image: url(ghost3.png);
+    background-size: cover;
+}
+#ghost4 {
+    background-image: url(ghost4.png);
+    background-size: cover;
+}
+#ghost5 {
+    background-image: url(ghost5.png);
+    background-size: cover;
+}
+#ghost6 {
+    background-image: url(ghost6.png);
+    background-size: cover;
+} */
+
 #win_or_lose_text {
     fill: white;
     font-size: 80px;
@@ -122,3 +160,39 @@ rect {
     stroke: green;
     stroke-width: 2;
 }
+
+/* #win-container {
+    text-align: center;
+    border: 2px solid black;
+    display: flex;
+    max-width: 33%;
+    justify-content: left;
+    align-items: left;
+} */
+
+.hidden {
+    display: none !important;
+}
+
+/* .score-container {
+    position: absolute;
+    top: 25;
+    right: 0;
+    padding: 10px;
+    background-color: #fff;
+    border: 2px solid #004B98;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+#score {
+    margin: auto;
+    color: #004B98;
+    font-weight: bold;
+}
+
+#current-score {
+    color: #FFD700; 
+    /* font-size: 18px; 
+    margin-left: 5px; */
+/* } */
