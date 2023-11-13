@@ -56,7 +56,16 @@
                     .then(data => {wordList.innerHTML = data.join('<br>');}).catch(console.error);
             }
             // updateWordList();
+
         });
+
+        function updateWordList() {
+                const wordList = document.getElementById("word-list");
+                fetch('http://localhost/CS341_API/data_src/api/hangman/list.php', {method: 'get'}) // TODO: Change file path for FTP
+                    .then(response => response.json())
+                    .then(data => {wordList.innerHTML = data.join('<br>');}).catch(console.error);
+        }
+
     </script>
 
 </head>
@@ -118,7 +127,14 @@
                 <div id="response2"></div>
             </form>
             <br>
-            <div id="word-list"></div>
+            <div id="word-list">
+                <button type="button" onclick="updateWordList()">Show word list</button>
+            </div>
+            <br>
+            <div id="hide-button"> 
+                <button onClick="window.location.reload();">Hide word list</button>
+            </div>
+
         </section>
     </main>
 </body>
