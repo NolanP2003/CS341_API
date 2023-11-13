@@ -39,13 +39,15 @@ if ($qry = $connection->prepare("SELECT adminID, password FROM admin WHERE usern
             header("Location: ../../../web_src/general/settings.php");
         }
     } else {
-        echo "Incorrect";
+        echo "Incorrect username or password, try again.";
+        header("Location: ../../../web_src/general/login.php");
     }
     $qry->close();
     
 
 } else {
-    echo "Incorrect";
+    echo "Incorrect username or password, try again.";
+    header("Location: ../../../web_src/general/login.php");
 }
 
 // Close the database connection
