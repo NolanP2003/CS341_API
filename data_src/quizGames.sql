@@ -35,6 +35,15 @@ CREATE TABLE IF NOT EXISTS hangman (
     PRIMARY KEY (wordID)
 );
 
+CREATE TABLE IF NOT EXISTS admin (
+    adminID INT NOT NULL AUTO_INCREMENT,
+    username varchar(50) NOT NULL,
+    password varchar(50) NOT NULL,
+    PRIMARY KEY (adminID)
+);
+
+INSERT INTO admin (username, password) VALUES ("jays", "ninja");
+
 # Question 1 and answers
 INSERT INTO trivia (question) VALUES ("What year was Etown founded?");
 INSERT INTO answer (questionID, triv_answer, is_Correct) VALUES (1, "1899", TRUE);

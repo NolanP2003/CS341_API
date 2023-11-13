@@ -49,16 +49,14 @@
     <section id="login">
         <div id="welcome-text">Login</div>
         <br><br>
-        <form action="" method="post">
-            <div class="container">
+        <form action="../../data_src/api/admin/read.php" method="post">
                 <label for="username"><b>Username: </b></label>
-                <input type="text" placeholder="Enter Username" name="username" required>
+                <input type="text" placeholder="Enter Username" name="username" id="username" required>
 
                 <label for="password"><b>Password: </b></label>
-                <input type="password" placeholder="Enter Password" name="password" required>
+                <input type="password" placeholder="Enter Password" name="password" id="password" required>
 
-                <button type="submit">Login</label>
-            </div>
+                <input type ="submit" value="Login">
         </form>
     </section>
 </body>
