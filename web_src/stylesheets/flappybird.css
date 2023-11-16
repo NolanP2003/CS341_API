@@ -79,3 +79,7 @@ body {
 #score-text {
     margin: 0;
 }
+
+.hidden {
+    display: none;
+}

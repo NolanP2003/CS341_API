@@ -1,3 +1,7 @@
+<?php
+session_start()
+?>
+
 <html>
 <head>
     <title>Login</title>
@@ -21,11 +25,19 @@
                             <i class="fas fa-home"></i> Home
                         </a>
                     </li>
+                    <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) { ?>
                     <li class="nav-item">
                         <a class="nav-link" href="settings.php">
                             <i class="fas fa-cog"></i> Settings
                         </a>
                     </li>
+                    <?php } else { ?>
+                        <li class="nav-item">
+                            <a class="hidden" href="settings.php">
+                                <i class="fas fa-cog hidden"></i> Settings
+                            </a>
+                        </li>
+                    <?php } ?>
                     <li class="nav-item">
                         <a class="nav-link" href="about.php">
                             <i class="fas fa-info-circle"></i> About

@@ -161,6 +161,10 @@ rect {
     stroke-width: 2;
 }
 
+.hidden {
+    display: none;
+}
+
 /* #win-container {
     text-align: center;
     border: 2px solid black;
