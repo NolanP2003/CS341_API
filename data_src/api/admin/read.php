@@ -1,5 +1,7 @@
 <?php
 require_once "../includes/db_config.php"; // Follow the lines
+// Starts session
+session_start();
 
 // Create database connection
 $connection = new mysqli($host, $dbUsername, $dbPassword, $database);
@@ -26,6 +28,7 @@ if ($qry = $connection->prepare("SELECT adminID, password FROM admin WHERE usern
         
         // Verifying password against hashed password
         if (password_verify($_POST["password"], $password)) {
+            // Regenerate session id to show login status
             session_regenerate_id();
             $_SESSION["loggedin"] = TRUE;
             $_SESSION["name"] = $_POST["username"];
