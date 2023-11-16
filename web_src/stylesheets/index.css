@@ -91,4 +91,7 @@ footer {
     color: white;
 }
 
+.hidden {
+    display: none;
+}
 

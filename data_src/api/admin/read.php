@@ -35,7 +35,8 @@ if ($qry = $connection->prepare("SELECT adminID, password FROM admin WHERE usern
             $_SESSION["id"] = $id;
 
             // Relocates back to settings once logged in
-            header("Location: ../../../web_src/general/settings.php");
+            
+            header("Location: ../../../web_src/general/index.php");
         }
     } else {
         echo "Incorrect username or password, try again.";
