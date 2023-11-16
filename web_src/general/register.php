@@ -46,22 +46,20 @@
         </nav>
     </header>
     <br>
-    <section id="login">
-        <div id="welcome-text">Login</div>
-        <br><br>
-        <form action="../../data_src/api/admin/read.php" method="post">
-                <label for="username"><b>Username: </b></label>
-                <input type="text" placeholder="Enter Username" name="username" id="username" required>
 
-                <label for="password"><b>Password: </b></label>
-                <input type="password" placeholder="Enter Password" name="password" id="password" required>
+    <div class="add">
+        <div id="welcome-text">Register</div>
+        <!-- Registration Form -->
+        <form action="../../data_src/api/admin/add.php" method="post">
+            <label for="username"><b>Username: </b></label>
+            <input type="text" placeholder="Enter Username" name="username" id="username" required>
 
-                <input type ="submit" value="Login">
+            <label for="password"><b>Password: </b></label>
+            <input type="password" placeholder="Enter Password" name="password" id="password" required>
+
+            <input type ="submit" value="Register">
         </form>
-        <!-- Register button for if not already an admin -->
-        <a class="nav-link" href="register.php">
-            <i class="fas fa-key"></i> Register
-        </a>
-    </section>
-</body>
+    </div>
+
+    </body>
 </html>
