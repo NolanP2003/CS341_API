@@ -74,7 +74,7 @@
             
                     <br><br>
                     Want to know more about the founding team?  
-                    <a href="foundingteam.php"> <br> Click Here ...</a>
+                    <a href="about/foundingteam.php"> <br> Click Here ...</a>
                     </div>
                 <br>
             </div>
