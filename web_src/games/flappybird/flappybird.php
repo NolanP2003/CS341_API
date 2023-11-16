@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flappy Bird Game</title>
     <link rel="stylesheet" href="../../stylesheets/flappybird.css">
-    <link rel="stylesheet" type="text/css" href="../../stylesheets/pacman.css">
+    <link rel="stylesheet" href="../../stylesheets/pacman.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
@@ -48,7 +48,7 @@
             <p id="score-text">Score: 0</p>
         </div>
     <div id="game-container">
-        <img id="bird" src="images/flappybird.png" alt="Flappy Bird">
+        <img id="bird" src="images/bluejaygif.gif" alt="Flappy Bird">
         <div class="pipe" id="pipeTop1"></div>
         <div class="pipe" id="pipeBottom1"></div>
         <div class="pipe" id="pipeTop2"></div>
