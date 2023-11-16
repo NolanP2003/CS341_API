@@ -2,6 +2,7 @@ const triviaQuestions = []; // empty list
 
 let currentQuestionIndex = 0;
 let count = 0; // Counter for number of Correct Answers
+let correctCount = 0;
 
 // TODO: Prevent repeat questions
 // TODO: Position of answers
@@ -41,18 +42,12 @@ function randomQuestion() { // Get questions from database
 
 function checkAnswer(isCorrect) {
     if (isCorrect) { // If true or 1
+        correctCount++
         document.body.style.backgroundColor = "green";
         document.getElementById("question-container").classList.add("green-background"); // Add green background class
         setTimeout(() => {
             document.body.style.backgroundColor = "";
             document.getElementById("question-container").classList.remove("green-background"); // Remove green background class
-            count++;
-            currentQuestionIndex++; // Idk 
-            if (count < 3) { // Make it count... to 3
-                randomQuestion(); // Can get repetitive
-            } else if (count === 3){
-                confirmationMessage();
-            }
         }, 1000);
     } else {
         document.getElementById("question-container").classList.add("red-background");
@@ -60,10 +55,17 @@ function checkAnswer(isCorrect) {
             document.getElementById("question-container").classList.remove("red-background");
         }, 1000);
     }
+    count++;
+    currentQuestionIndex++;
+    if (count < 3) {
+        randomQuestion(); // Can get repetitive
+    } else if (count === 3){
+        confirmationMessage(correctCount);
+    }
 }
 
-function confirmationMessage() { // You too can be told you are valid
-    const confirmation = confirm("Congratulations! You've completed the trivia. Click OK to go to the game page.");
+function confirmationMessage(correctCount) { // You too can be told you are valid
+    const confirmation = confirm("Congratulations! You've completed the trivia. " + correctCount + "/3. " + "Click OK to go to the game page.");
     if (confirmation) {
         window.location.href = "../games/menu.php";
     }
