@@ -57,14 +57,6 @@
         <p>Source: <a href="https://github.com/Hasselmannen/pacman/blob/master/README.markdown">Johan Hasselqvist's GitHub</a></p>
     </div>
 </div>
-<!-- <div class="score-container">
-    <p id="score">Score: <span id="current-score">0</span></p>
-</div> -->
-
-
-<!-- <aside id="win-container" class="hidden">
-    <p>hello</p>
-</aside> -->
 </main>
 </body>
 </html>
