@@ -40,7 +40,9 @@ function createBoard() {
   // either the first or second value
   function addInitialTiles() {
     let emptyPositions = [];
-  
+
+    // loop through the board to find empty positions
+    // when an empty position is found, an object storing those coordinates is added to emptyPositions
     for (let i = 0; i < rows; i++) {
       for (let j = 0; j < cols; j++) {
         if (board[i][j] === 0) {
@@ -48,7 +50,9 @@ function createBoard() {
         }
       }
     }
-  
+
+    // randomly adds two blocks to start with the initial starting value (2)
+    // it loops twice to add two spots
     for (let i = 0; i < 2; i++) {
       if (emptyPositions.length > 0) {
         const randomIndex = Math.floor(Math.random() * emptyPositions.length);
@@ -113,6 +117,8 @@ function handleKeyPress(event) {
   }
   
   // This listens to the event and moves the tile as directed
+  // this was a real pain to code so there very well could be some bugs
+  //  CHECK THIS FUNCTION
   function moveTiles(direction) {
     let moved = false;
   
@@ -209,43 +215,17 @@ function handleKeyPress(event) {
   }
   
   
-  //TODO: this function is not being called in the game yet as I am still in preliminary stages
+  //TODO: write this function to check is 2048 has been achieved (image11)
   function checkWin() {
-    for (let i = 0; i < rows; i++) {
-      for (let j = 0; j < cols; j++) {
-        if (board[i][j] === 2048) {
-          return true;
-        }
-      }
-    }
-    return false;
+
   }
   
-  //TODO: this function is not being called anywhere yet either
+  //TODO: write this function to check if moves are still available
   function checkLose() {
-    for (let i = 0; i < rows; i++) {
-      for (let j = 0; j < cols; j++) {
-        if (board[i][j] === 0) {
-          return false;
-        }
-      }
-    }
-    for (let i = 0; i < rows; i++) {
-      for (let j = 0; j < cols; j++) {
-        const currentValue = board[i][j];
-
-        if (j < cols - 1 && board[i][j + 1] === currentValue) {
-          return false;
-        }
-
-        if (i < rows - 1 && board[i + 1][j] === currentValue) {
-          return false;
-        }
-      }
-    }
-    return true;
+  
   }
 
+  // basically same thing as addInitialTile except this is called after each move and only iterates once
   function addRandomTile() {
     let emptyPositions = [];
 
