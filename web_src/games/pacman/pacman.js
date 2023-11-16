@@ -5,14 +5,33 @@ var SVGNS = "http://www.w3.org/2000/svg";
 
 		var newElement;
 
-		newElement = document.createElementNS(SVGNS, "defs");
-		newElement.innerHTML = "<g id='ghosts'>"
-                + "<rect   class='ghost_btm'  x='-12' y='0' height='14' width='24' />"
-                + "<circle class='ghost_top' cx='0'  cy='0'  r='12' />"
-                + "<circle class='ghost_eye' cx='-5' cy='-3' r='2' />"
-                + "<circle class='ghost_eye' cx='5'  cy='-3' r='2' />"
-				+ "</g>";
-		document.getElementById("pacmanSVG").appendChild(newElement);
+		// newElement = document.createElementNS(SVGNS, "defs");
+		// newElement.innerHTML = "<g id='ghosts'>"
+        //         + "<rect   class='ghost_btm'  x='-12' y='0' height='14' width='24' />"
+        //         + "<circle class='ghost_top' cx='0'  cy='0'  r='12' />"
+        //         + "<circle class='ghost_eye' cx='-5' cy='-3' r='2' />"
+        //         + "<circle class='ghost_eye' cx='5'  cy='-3' r='2' />"
+		// 		+ "</g>";
+		// document.getElementById("pacmanSVG").appendChild(newElement);
+
+
+        newElement = document.createElementNS(SVGNS, "g");
+        newElement.setAttribute("id", "ghosts");
+
+        // Create an image for each ghost
+        for (let i = 1; i <= 6; i++) {
+            const ghostImage = document.createElementNS(SVGNS, "image");
+            ghostImage.setAttribute("href", `ghost${i}.png`); // This line constructs the filename dynamically
+            ghostImage.setAttribute("class", `ghost ghost_${i}`);
+            ghostImage.setAttribute("x", "0"); // Set the initial position of the ghost
+            ghostImage.setAttribute("y", "0"); // Set the initial position of the ghost
+            ghostImage.setAttribute("width", "24"); // Adjust width as needed
+            ghostImage.setAttribute("height", "24"); // Adjust height as needed
+            newElement.appendChild(ghostImage);
+        }
+
+// Append the group element containing ghost images to the SVG
+document.getElementById("pacmanSVG").appendChild(newElement);
 
 		newElement = document.createElementNS(SVGNS, "g");
 		newElement.setAttribute("id", "cherry");
@@ -49,6 +68,7 @@ var SVGNS = "http://www.w3.org/2000/svg";
 		}
 
 		newElement = document.createElementNS(SVGNS,"g");
+        // maze positions
 		newElement.innerHTML = "<rect x='40' y='40' height='40' width='160' />"
 				+ "<rect x='240' y='40' height='40' width='120' />"
 				+ "<rect x='-3' y='120' height='40' width='83' />"
@@ -106,6 +126,9 @@ var SVGNS = "http://www.w3.org/2000/svg";
         for (var ghost_nr = 1; ghost_nr <= nrGhosts; ghost_nr++) {
             newElement = document.createElementNS(SVGNS, "use");
             newElement.setAttributeNS(XLinkNS, "href", "#ghosts");
+            
+
+
             newElement.setAttribute("transform", "translate(" + (160 + 40 * ((ghost_nr - 1) % 3)) + ", " + (160 + 40 * parseInt((ghost_nr - 1) / 3)) + ")");
             newElement.setAttribute("x", "0");
             newElement.setAttribute("y", "0");

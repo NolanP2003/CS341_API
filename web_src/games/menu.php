@@ -60,6 +60,7 @@
             <option value="hangman">Hangman</option>
             <option value="flappybird">Flappy Bird</option>
             <option value="pacman">Pacman</option>
+            <option value="2048">2048 - Etown Edition</option>
         </select>
     </div>
 
