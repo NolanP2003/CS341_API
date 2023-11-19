@@ -51,11 +51,20 @@ session_start()
                         </a>
                     </li>
 
+                    <!-- Checking whether to display login or logout button. -->
+                    <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="logout.php">
+                            <i class="fas fa-key"></i> Logout
+                        </a>
+                    </li>
+                    <?php } else { ?>
                     <li class="nav-item">
                         <a class="nav-link" href="login.php">
                             <i class="fas fa-key"></i> Login
                         </a>
                     </li>
+                    <?php } ?>
                 </ul>
             </div>
     </nav>
