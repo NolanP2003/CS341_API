@@ -29,7 +29,7 @@ session_start();
                     </li>
                     <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="settings.php">
+                        <a class="nav-link" href="../settings.php">
                             <i class="fas fa-cog"></i> Settings
                         </a>
                     </li>
