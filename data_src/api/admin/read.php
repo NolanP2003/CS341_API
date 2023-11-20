@@ -1,5 +1,7 @@
 <?php
 require_once "../includes/db_config.php"; // Follow the lines
+// Starts session
+session_start();
 
 // Create database connection
 $connection = new mysqli($host, $dbUsername, $dbPassword, $database);
@@ -9,13 +11,8 @@ if ($connection->connect_error) {
     die("Connection failed: ".$connection->connect_error);
 }
 
-if (isset($_POST['username'], $_POST['password'])) {
-    $username = $_POST["username"]; // Receive the admin username
-    $password = $_POST["password"]; // Receive the admin password
-} else {
-    $response = ["status" => "Error", "message" => "Invalid or empty"];
-    echo json_encode($response);
-    exit;
+if (!isset($_POST['username'], $_POST['password'])) {
+    exit('Please complete the registration form!');
 }
 
 // SQL query
@@ -29,14 +26,17 @@ if ($qry = $connection->prepare("SELECT adminID, password FROM admin WHERE usern
         $qry->bind_result($id, $password);
         $qry->fetch();
         
-        if ($_POST["password"] === $password) {
+        // Verifying password against hashed password
+        if (password_verify($_POST["password"], $password)) {
+            // Regenerate session id to show login status
             session_regenerate_id();
             $_SESSION["loggedin"] = TRUE;
             $_SESSION["name"] = $_POST["username"];
             $_SESSION["id"] = $id;
 
-            // Relocates back to home once logged in
-            header("Location: ../../../web_src/general/settings.php");
+            // Relocates back to settings once logged in
+            
+            header("Location: ../../../web_src/general/index.php");
         }
     } else {
         echo "Incorrect username or password, try again.";

@@ -1,5 +1,4 @@
 <?php
-// Start the session to access session variables
 session_start();
 ?>
 
@@ -7,7 +6,7 @@ session_start();
 <html>
 <head>
     <title>Etown Trivia</title>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
+    <link rel="stylesheet" type="text/css" href="../../stylesheets/about.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
     
@@ -16,7 +15,7 @@ session_start();
     <header>
         <nav class="navbar navbar-expand-lg navbar bg-blue">
             <a class="navbar-brand" href="index.php">
-                <img id="logo" src="../includes/images/logo.png" alt="Logo" width='100px.'>
+                <img id="logo" src="../../includes/images/logo.png" alt="Logo" width='100px.'>
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -24,13 +23,13 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">
+                        <a class="nav-link" href="../index.php">
                             <i class="fas fa-home"></i> Home
                         </a>
                     </li>
                     <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) { ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="settings.php">
+                        <a class="nav-link" href="../settings.php">
                             <i class="fas fa-cog"></i> Settings
                         </a>
                     </li>
@@ -41,14 +40,13 @@ session_start();
                             </a>
                         </li>
                     <?php } ?>
-
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php">
+                        <a class="nav-link" href="../about.php">
                             <i class="fas fa-info-circle"></i> About
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="../games/menu.php">
+                        <a class="nav-link" href="../../games/menu.php">
                             <i class="fas fa-gamepad"></i> Games
                         </a>
                     </li>
@@ -71,37 +69,26 @@ session_start();
         </nav>
     </header>
 
-    <main>
-        <section id="welcome">
-            <div id="welcome-text">Welcome to the Etown gaming website!</div>
-            <br>
-            <div id="welcome-subtext">This website will primarily be used for open houses and 
-                new student events to introduce them to some of the
-                facts and traditions that shape the lives of Etown
-                college students. Prospective students will be asked questions,
-                and if answered correctly, Etown themed games will be accessible
-                to play.
-            </div>
-        </section>
-        <section id="game">
-            <br>
-            <div id="welcome-text-2">Start Playing</div>
-            <br>
-            <div id="welcome-subtext-2">Answer a trivia question, play a round of hangman! 
-                Learn more about Elizabethtown and try to get on the leaderboard!
-            </div>
-            <br>
-            <!-- Links start button image and uses that to route to game menu. -->
-            <a href="user.php"><img src = "../includes/images/start_button.png" class="center" width='140px.'></a>
-            <br><br><br>
-        </section>
-    </main>
+    <div class="buttons">
+            <a href="../about.php"><button class="button button2">Go Back!</button></a> 
+        </div>
+    
+    <div class= "team-section">
 
-    <footer>
-        <?php
-        require_once "../includes/footer.php";
-        ?>
-    </footer>
+        <div id="welcome-text">THE FOUNDING TEAM</div>
+        <br>
+        <div class= "section"> This project was taken on and created by team API from Etown's CS341 (Software Engineering) in Fall 2023. <BR></div>
+        <br>
+        <div class="pfp">
+            <a href="NolanPettit.php"><img id="NolanPic" src="../teampics/goat.png" alt="Nolan Pettit" ></a>
+            <a href="EmmaMaykut.php"><img id="EmmaPic" src="../teampics/cat.png" alt="Emma Maykut" ></a>
+            <a href="DanielleStrausburger.php"><img id="DaniPic" src="../teampics/turtle.png" alt="Danielle Strausburger" ></a>
+            <a href="IsabelPMattivi.php"><img id="IsabelPic" src="../teampics/redpanda.png" alt="Isabel Pacheco Mattivi" ></a>
+            <a href="StephanieMotz.php"><img id="StephPic" src="../teampics/giraffe.png" alt="Stephanie Motz" ></a>
+        </div>
 
+        <div class="section" id="team-names">
+            <span class="name">From Left to Right: </span> 
+            <span class="name">Nolan Pettit, Emma Maykut, Danielle Strausburger, Isabel Pacheco Mattivi, and Stephanie Motz </span>
+        </div>
 </body>
-</html>

@@ -1,14 +1,12 @@
-<!DOCTYPE html>
 <html>
 <head>
-    <title>Etown Trivia</title>
-    <link rel="stylesheet" type="text/css" href="../stylesheets/about.css">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../stylesheets/index.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
-    
 </head>
 <body>
-    <header>
+<header>
         <nav class="navbar navbar-expand-lg navbar bg-blue">
             <a class="navbar-brand" href="index.php">
                 <img id="logo" src="../includes/images/logo.png" alt="Logo" width='100px.'>
@@ -21,11 +19,6 @@
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">
                             <i class="fas fa-home"></i> Home
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="settings.php">
-                            <i class="fas fa-cog"></i> Settings
                         </a>
                     </li>
                     <li class="nav-item">
@@ -47,27 +40,21 @@
             </div>
         </nav>
     </header>
+    <br>
 
-    <div class="buttons">
-            <a href="about.php"><button class="button button2">Go Back!</button></a> 
-        </div>
-    
-    <div class= "team-section">
+    <div class="add">
+        <div id="welcome-text">Register</div>
+        <!-- Registration Form -->
+        <form action="../../data_src/api/admin/add.php" method="post">
+            <label for="username"><b>Username: </b></label>
+            <input type="text" placeholder="Enter Username" name="username" id="username" required>
 
-        <div id="welcome-text">THE FOUNDING TEAM</div>
-        <br>
-        <div class= "section"> This project was taken on and created by team API from Etown's CS341 (Software Engineering) in Fall 2023. <BR></div>
-        <br>
-        <div class="pfp">
-            <a href="NolanPettit.php"><img id="NolanPic" src="teampics/goat.png" alt="Nolan Pettit" ></a>
-            <a href="EmmaMaykut.php"><img id="EmmaPic" src="teampics/cat.png" alt="Emma Maykut" ></a>
-            <a href="DanielleStrausburger.php"><img id="DaniPic" src="teampics/turtle.png" alt="Danielle Strausburger" ></a>
-            <a href="IsabelPMattivi.php"><img id="IsabelPic" src="teampics/redpanda.png" alt="Isabel Pacheco Mattivi" ></a>
-            <a href="StephanieMotz.php"><img id="StephPic" src="teampics/giraffe.png" alt="Stephanie Motz" ></a>
-        </div>
+            <label for="password"><b>Password: </b></label>
+            <input type="password" placeholder="Enter Password" name="password" id="password" required>
 
-        <div class="section" id="team-names">
-            <span class="name">From Left to Right: </span> 
-            <span class="name">Nolan Pettit, Emma Maykut, Danielle Strausburger, Isabel Pacheco Mattivi, and Stephanie Motz </span>
-        </div>
-</body>
+            <input type ="submit" value="Register">
+        </form>
+    </div>
+
+    </body>
+</html>

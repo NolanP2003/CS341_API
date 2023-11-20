@@ -10,6 +10,15 @@ if ($connection->connect_error) {
 
 if (isset($_POST["question"]) && !empty($_POST["question"])) {
     $question = $_POST["question"];
+    if ((isset($_POST["answer1"]) && !empty($_POST["answer1"])) && (isset($_POST["answer2"]) && !empty($_POST["answer2"])) && (isset($_POST["answer3"]) && !empty($_POST["answer3"]))) {
+        $answer1 = $_POST["answer1"]; // Should be the correct one
+        $answer2 = $_POST["answer2"];
+        $answer3 = $_POST["answer3"];
+    } else {
+        $response = ["status" => "Error", "message"=> "Answers required"];
+        echo json_encode($response);
+        exit;
+    }
 } else {
     $response = ["status" => "Error", "message"=> "Question required"];
     echo json_encode($response);
@@ -21,16 +30,6 @@ $sql->bind_param("s", $question);
 $sql->execute();
 
 $questionID = mysqli_insert_id($connection);
-
-if ((isset($_POST["answer1"]) && !empty($_POST["answer1"])) && (isset($_POST["answer2"]) && !empty($_POST["answer2"])) && (isset($_POST["answer3"]) && !empty($_POST["answer3"]))) {
-    $answer1 = $_POST["answer1"]; // Should be the correct one
-    $answer2 = $_POST["answer2"];
-    $answer3 = $_POST["answer3"];
-} else {
-    $response = ["status" => "Error", "message"=> "Answers required"];
-    echo json_encode($response);
-    exit;
-}
 
 $sqlAns1 = $connection->prepare("INSERT INTO answer (questionID, triv_answer, is_Correct)
     VALUES (?, ?, TRUE)");

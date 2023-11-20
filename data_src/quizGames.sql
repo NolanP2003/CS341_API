@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS hangman (
 CREATE TABLE IF NOT EXISTS admin (
     adminID INT NOT NULL AUTO_INCREMENT,
     username varchar(50) NOT NULL,
-    password varchar(50) NOT NULL,
+    password varchar(250) NOT NULL,
     PRIMARY KEY (adminID)
 );
 

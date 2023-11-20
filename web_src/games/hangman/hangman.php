@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -21,11 +25,19 @@
                         <i class="fas fa-home"></i> Home
                     </a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="../../general/settings.php">
-                        <i class="fas fa-cog"></i> Settings
-                    </a>
-                </li>
+                <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../general/settings.php">
+                            <i class="fas fa-cog"></i> Settings
+                        </a>
+                    </li>
+                    <?php } else { ?>
+                        <li class="nav-item">
+                            <a class="hidden" href="../../general/settings.php">
+                                <i class="fas fa-cog hidden"></i> Settings
+                            </a>
+                        </li>
+                    <?php } ?>
                 <li class="nav-item">
                         <a class="nav-link" href="../../general/about.php">
                             <i class="fas fa-info-circle"></i> About
@@ -36,11 +48,20 @@
                         <i class="fas fa-gamepad"></i> Games
                     </a>
                 </li>
-                <li class="nav-item">
+                <!-- Checking whether to display login or logout button. -->
+                <?php if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) { ?>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../general/logout.php">
+                            <i class="fas fa-key"></i> Logout
+                        </a>
+                    </li>
+                    <?php } else { ?>
+                    <li class="nav-item">
                         <a class="nav-link" href="../../general/login.php">
                             <i class="fas fa-key"></i> Login
                         </a>
-                </li>
+                    </li>
+                <?php } ?>
             </ul>
         </div>
     </nav>
