@@ -116,6 +116,15 @@
         </nav>
     </header>
 
+    <section id="sub-settings">
+        <ul class="sub-nav">
+            <div class="sub-nav-items">
+                <li><a href="settings.php">Hangman</a></li>
+                <li><a href="trivia.php">Trivia</a></li>
+            </div>
+        </ul>
+    </section>
+
     <main>
         <section id="game">
             <br>

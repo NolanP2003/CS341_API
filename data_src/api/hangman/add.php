@@ -9,7 +9,7 @@ if ($connection->connect_error) {
     die("Connection failed: ".$connection->connect_error);
 }
 
-if (isset($_POST["word"]) && !empty($_POST["word"]) && preg_match('/^[A-Za-z]+$/', $word)) {
+if (isset($_POST["word"])  &&  !empty($_POST["word"])  &&  preg_match('/^[A-Za-z]+$/',$_POST["word"])) {
     $word = $_POST["word"]; // Receive the Word of User
 } else {
     $response = ["status" => "Error", "message" => "Invalid or empty"];
