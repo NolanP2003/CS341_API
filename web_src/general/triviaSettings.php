@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['id'])) {
+    header('Location:login.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -95,8 +98,14 @@ session_start();
                         </a>
                     </li>
                     <li class="nav-item">
+                        <div class="subnav">
                         <a class="nav-link" href="settings.php">
-                            <i class="fas fa-cog"></i> Settings
+                        <i class="fas fa-cog"></i>Settings<button class="subnavbtn"></button>
+                            <div class="subnav-content">
+                                <a href="triviaSettings.php">Trivia Settings </a>
+                                <a href="hangmanSettings.php">Hangman Settings </a>
+                            </div>
+                        </div>
                         </a>
                     </li>
                     <li class="nav-item">

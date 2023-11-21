@@ -38,6 +38,9 @@ if ($qry = $connection->prepare("SELECT adminID, password FROM admin WHERE usern
             
             header("Location: ../../../web_src/general/index.php");
         }
+        else {
+            header("Location: ../../../web_src/general/login.php");
+        }
     } else {
         echo "Incorrect username or password, try again.";
         header("Location: ../../../web_src/general/login.php");
