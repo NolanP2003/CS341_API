@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 guessedLetters.push(letter);
                 guessedLettersList.textContent = guessedLetters.join(", ");
                 if (attempts === 0) {
+                    birdPics.src = "../../../web_src/games/hangman/images/flyer.png"; // Bird flies away cause you're dumb
                     endGame("Sorry, you're out of attempts. The word was: " + word);
                 }
             }
@@ -95,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function endGame(message) {
-        birdPics.src = "../../../web_src/games/hangman/images/flyer.png"; // Bird flies away cause you're dumb
         alert(message);
         guessInput.disabled = true;
         guessButton.disabled = true;
