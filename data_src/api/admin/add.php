@@ -13,9 +13,10 @@ if (!isset($_POST['username'], $_POST['password'])) {
 }
 
 // Forces password to be long enough
-if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
-	exit('Password must be between 5 and 20 characters long!');
-}
+// if (strlen($_POST['password']) > 20 || strlen($_POST['password']) < 5) {
+// 	exit('Password must be between 5 and 20 characters long!');
+//     header("Location: ../../../web_src/general/register.php");
+// }
 
 // Check if chosen username is used.
 if ($qry = $connection->prepare("SELECT adminID, password FROM admin WHERE username = ?")) {
@@ -26,6 +27,7 @@ if ($qry = $connection->prepare("SELECT adminID, password FROM admin WHERE usern
     // If username is found
     if ($qry->num_rows > 0) {
         echo "Username exists, please choose another!";
+        header("Location: ../../../web_src/general/register.php");
     } else {
         // Adds to admin table
         if ($qry = $connection->prepare("INSERT INTO admin (username, password) VALUES (?, ?)")) {
