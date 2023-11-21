@@ -96,7 +96,8 @@ if (!isset($_SESSION['id'])) {
                         <a class="nav-link" href="index.php">
                             <i class="fas fa-home"></i> Home
                         </a>
-                        <li class="nav-item">
+                    </li>
+                    <li class="nav-item">
                         <div class="subnav">
                         <a class="nav-link" href="settings.php">
                         <i class="fas fa-cog"></i>Settings<button class="subnavbtn"></button>
