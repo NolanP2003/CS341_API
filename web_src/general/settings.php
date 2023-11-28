@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION['id'])) {
+    header('Location:login.php');
+}
 ?>
 
 <!DOCTYPE html>
@@ -101,6 +104,7 @@ session_start();
                             <div class="subnav-content">
                                 <a href="triviaSettings.php">Trivia Settings </a>
                                 <a href="hangmanSettings.php">Hangman Settings </a>
+                                <a href="userUpdate.php">User Info </a>
                             </div>
                         </div>
                         </a>
