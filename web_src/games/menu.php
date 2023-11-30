@@ -80,9 +80,9 @@ session_start();
         <label for="game-selector">Select a game: </label>
         <select id="game-selector" onchange="loadGame(this)">
             <option value="">Select a game</option>
-            <option value="hangman">Hangman</option>
-            <option value="flappybird">Flappy Bird</option>
-            <option value="pacman">Pacman</option>
+            <option value="hangman">Flight of the Jay</option>
+            <option value="flappybird">Flappy Jay</option>
+            <option value="pacman">Professor Pursuit</option>
             <option value="2048">2048 - Etown Edition</option>
         </select>
     </div>

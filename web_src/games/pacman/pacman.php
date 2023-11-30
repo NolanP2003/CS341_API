@@ -68,7 +68,7 @@ session_start();
 <main>
     
     
-    <h1 id="Welcome">Welcome to Pac-Man! Click the screen to start the game.</h1>
+    <h1 id="Welcome">Welcome to Professor Pursuit! <br> Click the screen to start the game.</h1>
 <div class="pacman-container">
     <svg id="pacmanSVG"
          version="1.1"

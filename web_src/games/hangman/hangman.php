@@ -68,7 +68,7 @@ session_start();
     
     <main>
 
-    <h1>Hangman Game</h1>
+    <h1>Flight of the Jay</h1>
         <p>Guess the word by entering a letter.</p>
 
     <section id= "hangmanPics">
