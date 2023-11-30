@@ -67,27 +67,38 @@ session_start();
     </nav>
     
     <main>
+
     <h1>Hangman Game</h1>
-    
         <p>Guess the word by entering a letter.</p>
+
+    <section id= "hangmanPics">
+        <img id="bird-cycle" align="center" src="../../../web_src/games/hangman/images/nest.png" width=300 height=300>
+    </section>
+
+
+    <section id="Hangman">
         <div class="hangman-container">
             <div class="word-display" id="word-display"></div>
             <div class="attempts">
                 <p>Incorrect Attempts Left: <span id="attempt-count">6</span></p>
             </div>
-            <div class="input-section">
-                <input type="text" id="guess" maxlength="1">
-                <button id="guess-button" tabindex="0">Guess</button>
-            </div>
+        <div class="input-section">
+            <input type="text" id="guess" maxlength="1">
+            <button id="guess-button" tabindex="0">Guess</button>
         </div>
-        <img id="bird-cycle" align="right" src="../../../web_src/games/hangman/images/nest.png" width=300 height=300>
-        <div id="guessed-letters-box">
-            <h2>Guessed Letters</h2>
-            <div id="guessed-letters-list"></div>
         </div>
-        <br>
-       
+    </section>
+
+    <section id="guessedStuff">
+    <div id="guessed-letters-box">
+        <h2>Guessed Letters</h2>
+        <div id="guessed-letters-list"></div>
+    </div>
+    </section>
+
+    <br>
     </main>
+
     <script src="hangman.js"></script>
 </body>
 </html>
