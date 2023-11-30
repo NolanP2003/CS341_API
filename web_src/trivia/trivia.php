@@ -71,20 +71,20 @@ session_start();
             </div>
         </nav>
 
+    <main>
+        <section id="welcome">
+            <div id="welcome-message-trivia">Welcome to our Trivia Page!</div>
+            <br>
+            <div id="trivia-subtext"> Answer 3 Etown-based Trivia Questions below to move on!</div>
+            <br><br>
+        </section>
+        <section id="question-and-answer">
+            <div id="basicContainer">
+            <div id="question-container"> </div>
+            <div id="answer-options"></div>
+                    </div>
+    </main>
 
-    <div id="welcome-message">
-        <p>Welcome to our Trivia Page!</p>
-    </div>
-
-    <div id="question-container">
-        <!-- ><div id="answer-options" >
-            
-        </div> -->
-    </div>
-
-    <div id="answer-options">
-
-    </div>
 
     <!-- <div id="game-select">
         <label for="game-selector">Select a game: </label>

@@ -41,6 +41,31 @@ function randomQuestion() { // Get questions from database
 }
 
 function checkAnswer(isCorrect) {
+    const questionContainer = document.getElementById("question-container");
+
+    if (isCorrect) {
+        correctCount++;
+        questionContainer.style.backgroundColor = "green";
+        setTimeout(() => {
+            questionContainer.style.backgroundColor = "";
+        }, 1000);
+    } else {
+        questionContainer.style.backgroundColor = "red";
+        setTimeout(() => {
+            questionContainer.style.backgroundColor = "";
+        }, 1000);
+    }
+
+    count++;
+    currentQuestionIndex++;
+    if (count < 3) {
+        randomQuestion();
+    } else if (count === 3) {
+        confirmationMessage(correctCount);
+    }
+}
+
+/* function checkAnswer(isCorrect) {
     if (isCorrect) { // If true or 1
         correctCount++
         document.body.style.backgroundColor = "green";
@@ -63,6 +88,7 @@ function checkAnswer(isCorrect) {
         confirmationMessage(correctCount);
     }
 }
+*/
 
 function confirmationMessage(correctCount) { // You too can be told you are valid
     const confirmation = confirm("Congratulations! You've completed the trivia. " + correctCount + "/3. " + "Click OK to go to the game page.");
