@@ -72,7 +72,7 @@ session_start();
         <p>Guess the word by entering a letter.</p>
 
     <section id= "hangmanPics">
-        <img id="bird-cycle" align="center" src="../../../web_src/games/hangman/images/nest.png" width=300 height=300>
+        <img id="bird-cycle" align="center" src="../../../web_src/games/hangman/images/nest2.png" width=200 height=200>
     </section>
 
 

@@ -68,21 +68,21 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
                 renderWordDisplay();
                 if (guessedWord.join("") === word) {
-                    //birdPics.src = "../../../web_src/games/hangman/nest.png";
+                    //birdPics.src = "../../../web_src/games/hangman/nest2.png";
                     endGame("Congratulations! You guessed the word: " + word);
                 }
             } else {
                 attempts--;
                 if (attempts === 5) { // Bird Life Cycle
-                    birdPics.src = "../../../web_src/games/hangman/images/egg in nest.png";
+                    birdPics.src = "../../../web_src/games/hangman/images/egg in nest2.png";
                 } else if (attempts === 4) {
-                    birdPics.src = "../../../web_src/games/hangman/images/cracked egg.png";
+                    birdPics.src = "../../../web_src/games/hangman/images/cracked egg2.png";
                 } else if (attempts === 3) {
-                    birdPics.src = "../../../web_src/games/hangman/images/open egg.png";
+                    birdPics.src = "../../../web_src/games/hangman/images/open egg2.png";
                 } else if (attempts === 2) {
-                    birdPics.src = "../../../web_src/games/hangman/images/baby bird.png";
+                    birdPics.src = "../../../web_src/games/hangman/images/baby bird2.png";
                 } else if (attempts === 1) {
-                    birdPics.src = "../../../web_src/games/hangman/images/bluejay.png";
+                    birdPics.src = "../../../web_src/games/hangman/images/bluejay2.png";
                 }
                 attemptCount.textContent = attempts;
                 guessedLetters.push(letter);
