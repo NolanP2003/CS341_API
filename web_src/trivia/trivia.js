@@ -1,4 +1,5 @@
 const triviaQuestions = []; // empty list
+const questionResults = [];
 
 let currentQuestionIndex = 0;
 let count = 0; // Counter for number of Correct Answers
@@ -40,30 +41,39 @@ function randomQuestion() { // Get questions from database
     });
 }
 
+const circleResults = [];
+
 function checkAnswer(isCorrect) {
     const questionContainer = document.getElementById("question-container");
+    const currentCircle = document.getElementById(`circle${currentQuestionIndex + 1}`);
 
     if (isCorrect) {
         correctCount++;
+        circleResults[currentQuestionIndex] = true;
         questionContainer.style.backgroundColor = "green";
-        setTimeout(() => {
-            questionContainer.style.backgroundColor = "";
-        }, 1000);
+        currentCircle.style.backgroundColor = "green";
     } else {
+        circleResults[currentQuestionIndex] = false;
         questionContainer.style.backgroundColor = "red";
-        setTimeout(() => {
-            questionContainer.style.backgroundColor = "";
-        }, 1000);
+        currentCircle.style.backgroundColor = "red";
     }
 
-    count++;
-    currentQuestionIndex++;
-    if (count < 3) {
-        randomQuestion();
-    } else if (count === 3) {
-        confirmationMessage(correctCount);
-    }
+    setTimeout(() => {
+        questionContainer.style.backgroundColor = "";
+
+        count++;
+        currentQuestionIndex++;
+
+        if (count < 3) {
+            randomQuestion();
+        } else if (count === 3) {
+            setTimeout(() => {
+                confirmationMessage(correctCount);
+            }, 500); // Delay confirmation message by additional 500ms
+        }
+    }, 500);
 }
+
 
 /* function checkAnswer(isCorrect) {
     if (isCorrect) { // If true or 1
