@@ -121,6 +121,12 @@ main {
     font-size: 20px;
 }
 
+#seTitle {
+    text-align: center;
+    color: #004B98; 
+    font-size: 25px;
+}
+
 .center {
     display: block;
     margin-left: auto;

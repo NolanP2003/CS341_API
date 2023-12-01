@@ -117,9 +117,18 @@ session_start()
                 <br>
                 <div id="welcome-text-2">Etown's Computer Science Department</div>
                 <br>
-                    <div id="welcome-subtext-2"> Insert Information about the Computer Science Department Here
+                    <div id="welcome-subtext-2"> "Elizabethtown College’s Computer Science program is a multidisciplinary curriculum woven with 
+                        real-world experiences that prepares graduates for lucrative careers in software engineering, full-stack web and application 
+                        development, artificial intelligence, and cyber security. Computer Science is perfect for anyone who likes being on the cutting 
+                        edge of technology and innovation in today’s digital society.
+                        <br>
+                        Students learn best by doing, including working on real-world team projects using industry-relevant collaboration tools such as 
+                        Scrum and GitHub, cloud computing technologies, and cyber security measures. We offer a Computer Science degree that prepares you 
+                        in a variety of areas, so your career can evolve with technology." <br> -Elizabethtown College
                     <br><br>
-                    About Software Engineering: An introduction to software development methodologies including requirements specification, design, 
+                    <div id="seTitle"> Software Engineering: </div>
+                    <br> 
+                    An introduction to software development methodologies including requirements specification, design, 
                     testing, maintenance, and documentation. Students will participate in a large software development project using version control 
                     software.
                     <br><br>

@@ -75,9 +75,9 @@ session_start();
         </div>
 
         <section id="Isabel's Bio">
-            <div class="bio-title">Isabel Pacheco Mattivi</div>
+            <div class="bio-title">Isabel Mattivi</div>
             <br>
-            <div id="bio"> Isabel Pacheco Mattivi is a junior at Elizabethtown College. She is majoring in Computer Science 
+            <div id="bio"> Isabel Mattivi is a junior at Elizabethtown College. She is majoring in Computer Science 
                 with a mathematics minor. She plans to graduate in May 2025.
         </section>
     </main>
