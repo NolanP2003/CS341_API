@@ -117,7 +117,7 @@ if (!isset($_SESSION['id'])) {
         <section id="user-sec">
             <br>
             <div id="text">
-                <h2 style="text-align:center">User Visits In the Last 3 Months</h2>
+                <div id="welcome-text">User Visits In the Last 3 Months</div>
             </div> 
             <br>
             <div id="users">

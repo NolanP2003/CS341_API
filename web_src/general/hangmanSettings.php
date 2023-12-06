@@ -147,13 +147,15 @@ if (!isset($_SESSION['id'])) {
         <section id="game">
             <br>
             <div id="welcome-text">Hangman Settings</div>
-            <form action="../../data_src/api/hangman/add.php" method="post" id="add-word">
+            <div id= "basicContainer">
+            
+            <form action="../../data_src/api/hangman/add.php" method="post" id="add-word" style="text-align: left">
             &nbspAdd A Word: <input type="text" name="word"><br>
             &nbsp<input type="submit" value="Submit">
                 <div id="response"></div>
             </form>
             <br>
-            <form action="../../data_src/api/hangman/delete.php" method="post" id="delete-word">
+            <form action="../../data_src/api/hangman/delete.php" method="post" id="delete-word" style="text-align: left">
             &nbspDelete A Word: <input type="text" name="word"><br>
             &nbsp<input type="submit" value="Submit">
                 <div id="response2"></div>
@@ -166,6 +168,7 @@ if (!isset($_SESSION['id'])) {
             <div id="hide-button"> 
                 <button onClick="window.location.reload();">Hide word list</button>
             </div>
+    </div>
 
         </section>
     </main>

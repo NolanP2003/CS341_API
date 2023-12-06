@@ -141,7 +141,9 @@ if (!isset($_SESSION['id'])) {
         <section id="game">
             <br>
             <div id="welcome-text">Trivia Settings</div>
-            <form action="../../data_src/api/trivia/add.php" method="post" id="add-question">
+            <div id= "basicContainer">
+            
+            <form action="../../data_src/api/trivia/add.php" method="post" id="add-question" style="text-align: left">
             &nbspAdd a Question: <input type="text" name="question"><br><br>
             &nbspAnswer 1 (Correct) <input type="text" name="answer1"> Answer 2 (Incorrect) <input type="text" name="answer2"> Answer 3 (Incorrect) <input type="text" name="answer3">
             &nbsp<input type="submit" value="Submit">
@@ -149,15 +151,17 @@ if (!isset($_SESSION['id'])) {
             </form>
             <br>
             <br>
-            <form action="../../data_src/api/trivia/delete.php" method="post" id="delete-question">
+            <form action="../../data_src/api/trivia/delete.php" method="post" id="delete-question" style="text-align: left">
             &nbspEnter the QuestionID to Delete a Question: <input type="text" name="questionID"><br>
             &nbsp<input type="submit" value="Submit">
                 <div id="response2"></div>
             </form>
+            </div>
             <br>
             <div id="question-list">
             
             </div>
+                   
         </section>
     </main>
 </body>
