@@ -66,8 +66,10 @@ session_start();
             </ul>
         </div>
     </nav>
+    <br> 
+    <h1>2048: Etown Edition</h1>
 
-  <div class="container">
+    <div class="container">
     <div class="game-board">
       <!-- The game board will be generated dynamically using JavaScript -->
     </div>

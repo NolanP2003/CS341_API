@@ -23,6 +23,12 @@ body {
   margin: 0 10px;
 }
 
+h1 {
+  margin: 20px 0;
+  color: #004B98;
+  text-shadow: 2px 2px 4px #3DB5E6;
+  text-align: center;
+}
 
 .container {
   text-align: center;

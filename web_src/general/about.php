@@ -96,8 +96,7 @@ session_start()
                 <br>
                 <div id="welcome-text-2">Founding Team</div>
                 <br>
-                    <div id="welcome-subtext-2">Our team came together during Professor Reddig's Software Engineering class.
-                    We had a vision and creative freedom, and here we are.
+                    <div id="welcome-subtext-2">Our team, composed of five key members, came together during Professor Reddig's Software Engineering in Fall 2023. 
             
                     <br><br>
                     Want to know more about the founding team?  
@@ -125,6 +124,9 @@ session_start()
                         Students learn best by doing, including working on real-world team projects using industry-relevant collaboration tools such as 
                         Scrum and GitHub, cloud computing technologies, and cyber security measures. We offer a Computer Science degree that prepares you 
                         in a variety of areas, so your career can evolve with technology." <br> -Elizabethtown College
+
+                        <br><br> Want to know more about our Computer Science Department?  
+                        <a href="https://www.etown.edu/schools/school-of-engineering-and-computer-science/computer-science/index.aspx"> <br> Click Here ...</a>
                     <br><br>
                     <div id="seTitle"> Software Engineering: </div>
                     <br> 
@@ -132,8 +134,7 @@ session_start()
                     testing, maintenance, and documentation. Students will participate in a large software development project using version control 
                     software.
                     <br><br>
-                    Want to know more about our Computer Science Department?  
-                    <a href="https://www.etown.edu/schools/school-of-engineering-and-computer-science/computer-science/index.aspx"> <br> Click Here ...</a>
+                    
                     </div>
                 <br>
             </div>

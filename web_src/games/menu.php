@@ -72,6 +72,8 @@ session_start();
             </div>
         </nav>
 
+    <!-- Ghosts and Pacman -->
+
     <div class="path">
         <div class="pacman">
             <div class="pacman_eye"></div>
@@ -80,9 +82,11 @@ session_start();
         <div class="ghost">
         <div class="eyes"></div>
         <div class="skirt"></div>
+        
         </div>
     </div>
 
+    <!-- Game Selection -->
     <br><br>
     <div id="welcome-message">
         <p>Game Selection <br> Page!</p>
@@ -99,6 +103,8 @@ session_start();
         </select>
     </div>
     <br><br><br><br><br><br><br>
+
+    <!-- Mario Section -->
 
     <div class="main-container">
         <div class="mario-block" onclick="showChocolate()">

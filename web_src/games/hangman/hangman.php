@@ -69,7 +69,7 @@ session_start();
     <main>
 
     <h1>Flight of the Jay</h1>
-        <p>Guess the word by entering a letter.</p>
+        <p>Enter letters to guess the Etown related word.</p>
 
     <section id= "hangmanPics">
         <img id="bird-cycle" align="center" src="../../../web_src/games/hangman/images/nest2.png" width=200 height=200>
