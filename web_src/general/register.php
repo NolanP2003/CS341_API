@@ -44,8 +44,10 @@
 
     <div class="add">
         <div id="welcome-text">Register</div>
+        <div id="basicContainer">
+            
         <!-- Registration Form -->
-        <form action="../../data_src/api/admin/add.php" method="post">
+        <form action="../../data_src/api/admin/add.php" method="post" style= "text-align: left">
             <label for="username"><b>Username: </b></label>
             <input type="text" placeholder="Enter Username" name="username" id="username" required>
 
@@ -54,6 +56,7 @@
 
             <input type ="submit" value="Register">
         </form>
+        </div>
     </div>
 
     </body>

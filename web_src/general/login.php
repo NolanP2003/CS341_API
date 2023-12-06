@@ -61,7 +61,8 @@ session_start()
     <section id="login">
         <div id="welcome-text">Login</div>
         <br><br>
-        <form action="../../data_src/api/admin/read.php" method="post">
+        <div id="basicContainer">
+            <form action="../../data_src/api/admin/read.php" method="post" style="text-align: left">
                 <label for="username"><b>Username: </b></label>
                 <input type="text" placeholder="Enter Username" name="username" id="username" required>
 
@@ -69,11 +70,13 @@ session_start()
                 <input type="password" placeholder="Enter Password" name="password" id="password" required>
 
                 <input type ="submit" value="Login">
-        </form>
-        <!-- Register button for if not already an admin -->
-        <a class="nav-link" href="register.php">
-            <i class="fas fa-key"></i> Register
-        </a>
-    </section>
+            </form>
+            
+            <!-- Register button for if not already an admin -->
+            <a class="nav-link" href="register.php">
+                <i class="fas fa-key"></i> Register
+            </a>
+        </div>
+        </section>
 </body>
 </html>

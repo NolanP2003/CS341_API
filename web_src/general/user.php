@@ -69,15 +69,29 @@ session_start();
             <br>
             <div id="text">
                 <h2 style="text-align:center">User</h2>
-            </div> 
+            </div>
+            
             <br>
-            <form action="../../data_src/api/user/add.php" method="post" id="add-user" style="text-align: center">
-            Enter your username: <input type="text" name="user" required>
-            Enter your email: <input type="text" name="email" required>
-            Enter your name: <input type="text" name="first" required>
-                <input type="submit" value="Submit">
-            </form>
+
+            <div>
+                <div id="basicContainer">
+                <form action="../../data_src/api/user/add.php" method="post" id="add-user" style="text-align: left">
+
+                    <label for="username">Enter your <b>Username:</b></label>
+                    <input type="text" id= "username" name="user" required> <br><br>
+
+                    <label for="email">Enter your <b>Email:</b></label>
+                    <input type="text" id="email" name="email" required> <br><br>
+
+                    <label for="name">Enter your <b>Name:</b></label>
+                    <input type="text" id="name" name="first" required> <br><br>
+
+                    <input type="submit" value="Submit">
+                </form>
+                </div>
+            </div>
         </section>
     </main>
+
 </body>
 </html>
